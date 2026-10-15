@@ -4,12 +4,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const loginForm = document.getElementById("loginForm");
   const signupForm = document.getElementById("signupForm");
   const messageBox = document.getElementById("message");
+  const roleSelect = document.getElementById("role");
+  const studentClassGroup = document.getElementById("studentClassGroup");
+  const studentClassSelect = document.getElementById("studentClass");
 
   function showMessage(text, isError = true) {
     if (!messageBox) return;
     messageBox.textContent = text;
     messageBox.className = `message ${isError ? "error" : "success"}`;
     messageBox.style.display = "block";
+  }
+
+  function updateSignupRoleUI() {
+    if (!roleSelect || !studentClassGroup || !studentClassSelect) return;
+    const isStudent = roleSelect.value === "student";
+    studentClassGroup.style.display = isStudent ? "block" : "none";
+    studentClassSelect.required = isStudent;
+    if (!isStudent) studentClassSelect.value = "JSS 1";
   }
 
   // Tab switching setup
@@ -30,6 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     document.getElementById("toSignup")?.addEventListener("click", () => signupTab.click());
     document.getElementById("toLogin")?.addEventListener("click", () => loginTab.click());
+  }
+
+  if (roleSelect) {
+    roleSelect.addEventListener("change", updateSignupRoleUI);
+    updateSignupRoleUI();
   }
 
   // Load the database, then send already-logged-in users to their page
@@ -66,6 +82,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       const email = document.getElementById("signupEmail").value;
       const password = document.getElementById("signupPassword").value;
       const confirmPassword = document.getElementById("confirmPassword").value;
+      const role = document.getElementById("role").value;
+      const selectedClass = role === "student" ? document.getElementById("studentClass").value : "JSS 1";
 
       if (password !== confirmPassword) {
         showMessage("Passwords do not match.");
@@ -73,9 +91,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
 
       try {
-        const r = await Auth.register({ name, email, role: document.getElementById("role").value, password, class: "JSS 1" });
+        const r = await Auth.register({ name, email, role, password, class: selectedClass });
         showMessage(r.status === "pending" ? "Account created. An administrator must approve it before you can log in." : "Account created successfully! Please log in.", false);
         signupForm.reset();
+        if (roleSelect) roleSelect.value = "student";
+        updateSignupRoleUI();
         setTimeout(() => loginTab.click(), 1200);
       } catch (err) {
         showMessage(err.message);

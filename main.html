@@ -43,6 +43,7 @@
         <div class="breadcrumb"><span>Learning space</span><span class="crumb-slash">/</span><strong id="pageCrumb">Dashboard</strong></div>
         <div class="top-actions">
           <button class="icon-btn" id="themeButton" title="Toggle theme" aria-label="Toggle theme">◐</button>
+          <button type="button" class="btn btn-ghost btn-small" id="logoutButton">Log out</button>
           <div class="profile-chip">
             <div class="avatar">S</div>
             <div><strong id="profileName">Student</strong><small id="profileMeta">My learning space</small></div>
@@ -255,6 +256,9 @@
       localStorage.setItem("eduahead-theme", document.body.classList.contains("dark") ? "dark" : "light");
     });
     if (localStorage.getItem("eduahead-theme") === "dark") document.body.classList.add("dark");
+
+    const logoutButton = document.getElementById("logoutButton");
+    if (logoutButton) logoutButton.addEventListener("click", () => Auth.logout());
     
     const yearEl = document.getElementById("year");
     if(yearEl) yearEl.textContent = new Date().getFullYear();
