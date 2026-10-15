@@ -48,6 +48,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateSignupRoleUI();
   }
 
+  document.querySelectorAll(".show-password").forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.target;
+      const input = targetId ? document.getElementById(targetId) : null;
+      if (!input) return;
+      const isHidden = input.type === "password";
+      input.type = isHidden ? "text" : "password";
+      button.textContent = isHidden ? "Hide" : "Show";
+      button.setAttribute("aria-label", isHidden ? "Hide password" : "Show password");
+      input.focus();
+      input.setSelectionRange(input.value.length, input.value.length);
+    });
+  });
+
+  const authMode = new URLSearchParams(window.location.search).get("mode");
+  if (authMode === "signup" && signupTab && loginTab) {
+    signupTab.click();
+  } else if (authMode === "login" && signupTab && loginTab) {
+    loginTab.click();
+  }
+
   // Load the database, then send already-logged-in users to their page
   try {
     await DB.init();
