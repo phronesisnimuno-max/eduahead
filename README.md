@@ -1,179 +1,149 @@
-# EduAhead: Student Guide to How the Project Works
+# EduAhead
 
-*Read this first. You do not need to be an expert. By the end you should be able to explain the project to your class, your teacher or a visitor.*
+EduAhead is a browser-based learning platform for students, teachers, parents, and administrators. The app combines a modern landing page, role-based access controls, a student dashboard, a staff console, and a learning analytics area for strengths and weaknesses.
 
----
+## Project flow
 
-## 1. What is EduAhead?
+The app now has two main public entry points:
 
-EduAhead is a **mini school system that runs in a web browser**. It helps students study ahead, practise with quizzes and see how they are doing. It also lets teachers, parents and the school admin follow that progress.
+- `index.html` = student-facing landing page / home page
+- `auth.html` = login and sign-up page
+- `main.html` = student dashboard after login
+- `console.html` = staff/admin dashboard after login
 
-| Person | What they can do |
-|---|---|
-| **Student** | Read lessons, take quizzes, track progress, see strengths and weaknesses |
-| **Teacher** | Add lessons, see their students, create report slips |
-| **Parent** | See their child's reports |
-| **Admin** | Approve new staff, create accounts, manage everything, see the activity log |
-
-**Big idea:** the *same data* (lessons, users, scores) is shown differently to each person, and each person can only do what their role allows.
+The route configuration is centralized in `js/config.js` so login redirects always use the correct authentication page.
 
 ---
 
-## 2. The restaurant idea (easiest way to explain it)
+## Folder structure
 
-| In a restaurant | In EduAhead |
-|---|---|
-| The menu on the table | The pages you see (`index.html`, `main.html`, `console.html`) |
-| The waiter | The page scripts (`script2.js`, `app.js`) that take your clicks |
-| The kitchen | `backend.js`: the "brain" that follows the rules |
-| The storage room | The database (`db.json`, then saved in your browser) |
-| The security guard | `guard.js`: stops people without a ticket from walking in |
-
-You never walk into the kitchen. You tell the waiter, the waiter asks the kitchen, and the kitchen checks the rules. This is how real apps are built.
-
----
-
-## 3. The files and what each one is for
-
-```
+```text
 eduahead/
-├── index.html        Login / Sign-up page
-├── main.html         Student dashboard
-├── console.html      Staff & parent page (admin, teacher, parent)
-├── styles.css        Design for main + console pages
-├── index2.css        Design for the login page
-├── script2.js        Login & sign-up logic
-├── ai-teacher.css/js The AI Teacher chat button and window
+├── index.html          Landing page / home page
+├── auth.html           Login and sign-up page
+├── main.html           Student dashboard
+├── console.html        Staff console
+├── home.html           Optional copy of the landing page
+├── styles.css          Student and staff application styling
+├── index2.css          Authentication page styling
+├── script2.js          Login / signup interaction logic
+├── far.css             Landing page styling
+├── far.js              Landing page interactions
+├── ai-teacher.css      AI teacher popover styling
+├── ai-teacher.js       AI teacher demo interactions
 ├── data/
-│   └── db.json       The starting data (users, subjects, topics)
-└── js/
-    ├── config.js        Names of the pages (one place to rename)
-    ├── backend.js       The brain: database, login, rules, results
-    ├── guard.js         Blocks pages if you are not logged in
-    ├── insight-view.js  Builds the "strengths & weaknesses" page
-    └── app.js           Controls the staff/parent console
+│   └── db.json         Initial database with users, subjects, topics, and sample progress
+├── js/
+│   ├── config.js       Page route configuration
+│   ├── backend.js      Database, auth logic, RBAC, curriculum rules
+│   ├── guard.js        Redirects unauthenticated users
+│   ├── app.js          Staff console logic
+│   ├── auth-page.js   Authentication page helper logic
+│   ├── insight-view.js Strengths/weaknesses diagnostic UI
+│   └── main-access.js  Student access and curriculum setup
+├── images/             Brand and media assets
+├── tools/
+│   ├── make-admin.js   Helper for creating admin users
+│   └── migrate.js      Migration helper
+├── README.md
+└── package.json        Optional local server scripts if used
 ```
 
-**Three kinds of files (remember this):**
-- **HTML** = the *structure* (what is on the page)
-- **CSS** = the *look* (colours, spacing, fonts)
-- **JavaScript** = the *behaviour* (what happens when you click)
-- **JSON** = just *data*, written in a tidy list format
+---
+
+## How the app works
+
+### 1. Landing page
+
+The root `index.html` is the public landing page. It introduces EduAhead, highlights key benefits, and gives the user a clear call to action:
+
+- Log in
+- Sign up
+- Explore the product
+
+The CTA links open the authentication page at `auth.html` with a query parameter such as:
+
+- `auth.html?mode=login`
+- `auth.html?mode=signup`
+
+### 2. Authentication page
+
+The login/signup page is `auth.html`. It contains:
+
+- login form
+- registration form
+- password show/hide toggles
+- role selection
+- student class selection
+- redirect logic back to the right dashboard after login
+
+When a student logs in, the app redirects to `main.html`. When a teacher, parent, or admin logs in, it redirects to `console.html`.
+
+### 3. Student dashboard
+
+`main.html` loads the student dashboard, topic curriculum, quizzes, and progress tracking. Students can:
+
+- browse curriculum for their class
+- open learning topics
+- take practice quizzes
+- review progress and completion
+- view strengths and weaknesses by subject and topic
+
+### 4. Staff console
+
+`console.html` loads the console app for non-student roles. It handles:
+
+- teacher/student views
+- reports generation
+- user approval
+- curriculum management
+- activity logs
 
 ---
 
-## 4. How the files connect (the order matters)
+## Roles and permissions
 
-Each page loads scripts **in this order**: `config.js`, then `backend.js`, then the page's own script. The page script uses things made by the files before it, so the order must stay the same.
+EduAhead uses role-based access control.
 
-```
-Login page (index.html)        Student page (main.html)        Staff page (console.html)
- config.js                      config.js                       config.js
- backend.js                     backend.js                      backend.js
- script2.js                     guard.js                        app.js
-                                insight-view.js
-```
-
-**A journey through the app:**
-1. You open `index.html` and log in.
-2. `script2.js` asks `backend.js`: "Is this email and password correct?"
-3. If yes, the browser remembers who you are, then sends you to `main.html` (student) or `console.html` (everyone else).
-4. The new page loads and `backend.js` is asked: "Who is logged in? Which lessons can they see?"
-5. The page draws the right content for that person.
-6. When a student finishes a quiz, the score is saved, and teachers and parents can later see it in reports.
-
----
-
-## 5. What each important function does
-
-### `backend.js` (the brain)
-
-| Name | In plain words |
+| Role | Access |
 |---|---|
-| `Store` | Saves and loads data from the browser's memory (called *localStorage*) |
-| `DB.init()` | Starts the database. First time it copies `db.json`; after that it uses the saved copy |
-| `DB.save()` | Saves the database after any change |
-| `DB.log()` | Writes an entry in the **audit log** ("Ada approved a teacher") |
-| `DB.reset()` | Wipes everything and starts fresh (for testing) |
-| `DB.export()` | Downloads a backup file of all data |
-| `secure()` | Scrambles a password so the real one is never stored (see *hash* below) |
-| `Auth.login()` | Checks email and password; remembers the person if correct |
-| `Auth.register()` | Creates a new account (staff accounts wait for approval) |
-| `Auth.current()` | Answers "Who is logged in right now?" |
-| `Auth.logout()` | Forgets the person and goes back to the login page |
-| `PERMS` | A list of what each role is *allowed* to do |
-| `can()` / `need()` | `can` asks "allowed?" (yes/no). `need` stops the action with an error if not allowed |
-| `students()` | Decides *which students* you may see (teacher: own classes, parent: own children) |
-| `Users.create()` / `approve()` | Admin makes accounts or approves pending ones |
-| `Curriculum.forStudent()` | Gives a student their lessons: last class (revise), current class, next class (learn ahead) |
-| `Curriculum.list()` | Lessons for staff, limited by role |
-| `Curriculum.add()` | Adds a new topic (admin or the right teacher) |
-| `Results.compute()` | Works out each subject's average and overall grade from quiz scores |
-| `Reports.generate()` | Makes a report slip: subjects, grades and a teacher remark |
-| `Reports.list()` | Shows only the reports you are allowed to see |
+| Student | Own profile, own curriculum, own progress, own reports |
+| Teacher | Students in assigned classes, reports, curriculum access |
+| Parent | Assigned child reports |
+| Admin | Full system management and approval tools |
 
-### Other files
-
-| File | Job |
-|---|---|
-| `script2.js` | Switches between Login and Create account tabs, shows messages, sends the forms to `backend.js` |
-| `guard.js` | If you are not logged in, sends you to the login page. Also keeps **each student's progress separate** |
-| `app.js` | Builds the staff pages (dashboard, curriculum, users, students, reports, audit log) and handles their buttons |
-| `insight-view.js` | Looks at a student's scores and builds the **Strengths and Weaknesses** page |
-| `main.html` (inside) | Shows subjects, lessons, quizzes and progress; saves what the student completes |
+The rules are enforced mainly in `js/backend.js` and `js/guard.js`.
 
 ---
 
-## 6. How results and strengths/weaknesses are worked out
+## Data and storage
 
-1. A student finishes a quiz. The page calculates a **score %** and keeps the **best score** for each topic.
-2. **Subject average** = the average of the best scores in that subject.
-3. **Overall** = the average across subjects.
-4. **Grades:** A = 70+, B = 60+, C = 50+, D = 45+, E = 40+, F = below 40.
-5. **Strengths** are topics with 70% or more. **Weaknesses / revision areas** are topics below 70% or not tried yet.
-6. A teacher presses *Generate report* and the system saves a snapshot, so the report stays the same even if scores change later.
+The app stores its working data in the browser using `localStorage` and `sessionStorage`.
 
----
+- `eduahead-db-v2` = app database
+- `eduahead-progress-v1:<userId>` = student progress data
+- `sid` = current logged-in user ID in session storage
 
-## 7. Where is the data stored?
-
-| What | Where | Lasts |
-|---|---|---|
-| Starting data | `data/db.json` | Always (it is a file) |
-| Working database | Browser `localStorage` (`eduahead-db-v2`) | Until you clear the browser |
-| Each student's progress | `localStorage` (`eduahead-progress-v1:<id>`) | Until cleared |
-| "Who is logged in" | `sessionStorage` (`sid`) | Until the tab is closed |
-
-**Important:** all the data lives in *your own browser*, not on the internet. That is why teachers and students must use the same browser to see each other's results in this demo. A real school system would store this on a server.
+The base seed data comes from `data/db.json`.
 
 ---
 
-## 8. Words you should know
+## Authentication and login flow
 
-| Word | Meaning |
-|---|---|
-| **Frontend** | The part you see and click (HTML, CSS, page scripts) |
-| **Backend** | The part that stores data and follows rules (`backend.js`) |
-| **Database** | An organised store of information |
-| **JSON** | A text format for data: `{"name": "Tola", "class": "JSS 1"}` |
-| **Authentication** | Proving who you are (logging in) |
-| **Authorization / permissions** | What you are *allowed* to do after logging in |
-| **Role** | Your type of user: student, teacher, parent, admin |
-| **RBAC** | Role-Based Access Control: permissions depend on your role |
-| **Hash** | A one-way scramble of a password. You can check it, but not un-scramble it |
-| **Salt** | A random extra piece added before hashing so two equal passwords look different |
-| **Session** | The period you stay logged in |
-| **localStorage / sessionStorage** | Small storage areas inside the browser |
-| **Audit log** | A diary of important actions in the system |
-| **Curriculum / scheme of work** | The planned list of topics for each class and term |
-| **Redirect** | Automatically sending you to another page |
-| **Pending** | Waiting for approval (staff sign-ups) |
+The app flow is:
+
+1. User opens `index.html` or `auth.html`
+2. User logs in or creates an account
+3. `script2.js` validates the form
+4. `Auth.login()` or `Auth.register()` runs from `js/backend.js`
+5. The system stores the session and redirects to the correct page
+6. `guard.js` prevents access to protected routes without a valid session
 
 ---
 
-## 9. Try it yourself (demo steps)
+## Sample accounts
 
-**Start:** open the `eduahead` folder in VS Code and run **Live Server** on `index.html`, or run `npx serve .` in the folder. Opening the file by double-clicking will **not** work.
+Use these demo accounts when running the app locally:
 
 | Role | Email | Password |
 |---|---|---|
@@ -182,42 +152,52 @@ Login page (index.html)        Student page (main.html)        Staff page (conso
 | Student | student@school.ng | learn123 |
 | Parent | parent@school.ng | parent123 |
 
-1. **Student:** log in, open a topic, take a quiz, then open *My Specific Strengths and Weaknesses*.
-2. **Teacher:** log in, open *Students*, press *Generate Report Slip*, then open *Reports*.
-3. **Parent:** log in and see only the child's report.
-4. **Admin:** sign up a new Teacher on the login page. It will say "awaiting approval". Log in as admin, open *Users*, press *Approve*. The teacher can now log in.
-5. **Access control:** log in as a student and try opening `console.html`. You are sent back to your own page.
+---
 
-**If something goes wrong:** blank page or 404 means the folder layout is wrong, or you are not using a server. Weird old data: press **F12**, type `DB.reset()` in the Console, then hard refresh (**Ctrl + Shift + R**).
+## Running the project locally
+
+Open the project folder in VS Code and run a local web server using either:
+
+- Live Server extension, or
+- `npx serve .`
+
+Then open the project in the browser.
+
+Important:
+
+- Start from the project root so the app can load local assets correctly.
+- Do not open the project by double-clicking the files directly if browser file access causes issues.
+- For the app flow, the main entry is `index.html` and the auth route is `auth.html`.
 
 ---
 
-## 10. A 5-minute presentation outline
+## Known behavior
 
-1. **The problem (30s):** students need to study ahead and schools need to track progress.
-2. **The idea (30s):** one app with four roles: student, teacher, parent, admin.
-3. **Show it (2 min):** do demo steps 1, 2 and 4 above.
-4. **How it works (1 min):** show the restaurant picture. Pages are the menu, scripts are the waiter, `backend.js` is the kitchen, `db.json` is the storage room.
-5. **Safety (30s):** passwords are hashed, roles limit access, staff need approval, every action is logged.
-6. **Honest limits and next steps (30s):** data is stored in the browser, so a real version needs a server. Next steps are teachers editing quizzes and growth charts over time.
-
-**Questions you may get:**
-- *Why can't a student open the teacher page?* The guard checks the role and sends them back.
-- *Are passwords safe?* They are hashed, not stored as typed. But this is a practice project, so a real system needs a server.
-- *Where is the data?* In the browser, starting from `db.json`.
-- *How do you add a new subject?* Add it to `db.json`, raise `meta.rev` by one so browsers reload it, then refresh.
+- Student accounts can select their class on sign-up.
+- The dashboard only shows curriculum relevant to that class.
+- Password visibility toggles are available on auth inputs.
+- Staff accounts may need admin approval before they can sign in.
+- The landing page and auth page are intentionally separate to give the product a stronger first impression and more professional flow.
 
 ---
 
-## 11. Honest limits (good to say out loud)
+## Notes for developers
 
-- Anyone who knows the browser tools could edit the saved data. Real systems keep rules on a **server**.
-- Only some subjects and topics have full lessons and quizzes. Others are outlines for teachers to fill in.
-- The topic list follows the revised national curriculum structure, but a school should check it against its own approved scheme of work.
+If you need to update the route names, edit `js/config.js`.
 
-## 12. Ideas to extend it
-1. Let teachers edit lessons and quiz questions in the console.
-2. Show a growth chart of a student's scores over time.
-3. Add attendance and show it on the report slip.
-4. Add more subjects (Physics, Chemistry, Nigerian History, Digital Literacy).
-5. Let parents switch between several children.
+If you want to rename pages or add more roles, update:
+
+- `js/config.js`
+- the redirects in the relevant pages
+- any auth links that open `auth.html`
+
+---
+
+## Future improvements
+
+- connect this front-end to a real backend API
+- add real database persistence on a server
+- add admin dashboards for analytics and user management
+- expand subject content for more classes and terms
+- add teacher editing of curriculum content
+- add charts for student growth over time

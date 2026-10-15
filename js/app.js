@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     await DB.init();
     const u = Auth.current();
     if (!u) {
-      location.replace(PAGES.login || "index.html");
+      location.replace(PAGES.login || "auth.html");
       return;
     }
     if (u.role === "student") {

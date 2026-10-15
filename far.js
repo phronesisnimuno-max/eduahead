@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!signupForm.reportValidity()) return;
     signupMessage.textContent = "Redirecting you to create your account...";
     signupForm.reset();
-    window.location.href = "index.html?mode=signup";
+    window.location.href = "auth.html?mode=signup";
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();

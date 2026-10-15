@@ -1,2 +1,2 @@
 /* One place to rename pages. Edit these 3 filenames to match your project. */
-const PAGES={login:"index.html",student:"main.html",staff:"console.html"};
+const PAGES={login:"auth.html",student:"main.html",staff:"console.html"};

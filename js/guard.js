@@ -2,7 +2,7 @@
 (() => {
   const sid = sessionStorage.getItem("sid");
   if (!sid) {
-    location.replace(PAGES.login || "index.html");
+    location.replace(PAGES.login || "auth.html");
     return;
   }
   
