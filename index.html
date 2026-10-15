@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#175cd3">
+  <link rel="shortcut icon" href="1791923686177.jpg" type="image/jpg">
+  <title>EduAhead | Login & Sign Up</title>
+  <link rel="stylesheet" href="index2.css"> 
+</head>
+<body>
+  <main class="auth-container">
+    <section class="welcome-panel">
+      <a href="#" class="brand">
+        <span class="brand-logo">E</span>
+        <span>Edu<span class="brand-blue">Ahead</span></span>
+      </a>
+
+      <div class="welcome-content">
+        <span class="eyebrow">YOUR LEARNING JOURNEY STARTS HERE</span>
+        <h1>Learn today.<br>Lead tomorrow.</h1>
+        <p>
+          Discover new topics, improve your skills, and get ahead
+          of your class with EduAhead.
+        </p>
+
+        <div class="feature">
+          <span>✓</span>
+          <div>
+            <strong>Learn at your own pace</strong>
+            <small>Explore lessons whenever you're ready.</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>✓</span>
+          <div>
+            <strong>Track your progress</strong>
+            <small>Celebrate every learning milestone.</small>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span>✓</span>
+          <div>
+            <strong>Build your confidence</strong>
+            <small>Practise, revise, and prepare for class.</small>
+          </div>
+        </div>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> EduAhead. Made for curious minds.
+      </p>
+    </section>
+
+    <section class="form-panel">
+      <div class="mobile-brand">
+        <span class="brand-logo">E</span>
+        <span>Edu<span class="brand-blue">Ahead</span></span>
+      </div>
+
+      <div class="form-heading">
+        <h2 id="formTitle">Welcome back!</h2>
+        <p id="formSubtitle">Sign in to continue your learning journey.</p>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab active" id="loginTab">
+          Log in
+        </button>
+        <button type="button" class="tab" id="signupTab">
+          Create account
+        </button>
+      </div>
+
+      <div id="message" class="message" role="status"
+           aria-live="polite"></div>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="loginEmail">Email address</label>
+          <input type="email" id="loginEmail"
+                 placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <div class="label-row">
+            <label for="loginPassword">Password</label>
+            <button type="button" class="text-link"
+                    id="forgotPassword">Forgot password?</button>
+          </div>
+
+          <div class="password-wrap">
+            <input type="password" id="loginPassword"
+                   placeholder="Enter your password"
+                   minlength="6" required>
+            <button type="button" class="show-password"
+                    data-target="loginPassword">Show</button>
+          </div>
+        </div>
+
+       <button
+  type="submit" class="primary-button">
+  Log in <span>→</span>
+</button>
+
+        <p class="switch-text">
+          Don't have an account?
+          <button type="button" class="text-link" id="toSignup">
+            Sign up
+          </button>
+        </p>
+      </form>
+
+      <!-- REGISTRATION FORM -->
+      <form id="signupForm" class="hidden">
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName"
+                 placeholder="Enter your full name"
+                 autocomplete="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="signupEmail">Email address</label>
+          <input type="email" id="signupEmail"
+                 placeholder="you@example.com"
+                 autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Account type</label>
+          <select id="role" required>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="administrator">Administrator</option>
+          </select>
+          <small class="field-hint">
+            Administrator access must be approved separately.
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="signupPassword">Create password</label>
+          <div class="password-wrap">
+            <input type="password" id="signupPassword"
+                   placeholder="At least 8 characters"
+                   minlength="8" autocomplete="new-password"
+                   required>
+            <button type="button" class="show-password"
+                    data-target="signupPassword">Show</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm password</label>
+          <div class="password-wrap">
+            <input type="password" id="confirmPassword"
+                   placeholder="Repeat your password"
+                   minlength="8" autocomplete="new-password"
+                   required>
+            <button type="button" class="show-password"
+                    data-target="confirmPassword">Show</button>
+          </div>
+        </div>
+
+        <label class="terms">
+          <input type="checkbox" id="agreeTerms" required>
+          <span>I agree to use EduAhead responsibly and follow its
+            learning guidelines.</span>
+        </label>
+
+        <button type="submit" class="primary-button">
+          Create account <span>→</span>
+        </button>
+
+        <p class="switch-text">
+          Already registered?
+          <button type="button" class="text-link" id="toLogin" >
+            Log in
+          </button>
+        </p>
+      </form>
+
+      <p class="security-note">
+        <span>🔒</span> Your learning journey deserves a safe space.
+      </p>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/backend.js"></script>
+  <script src="script2.js"></script>
+  <!-- AI Teacher Button -->
+<button id="aiTeacherButton" class="ai-teacher-button"
+        aria-label="Open AI Teacher">
+  🤖 <span>AI Teacher</span>
+</button>
+
+<!-- AI Teacher Chat Window -->
+<section id="aiTeacherPanel" class="ai-teacher-panel"
+         role="dialog" aria-label="AI Teacher chat" hidden>
+
+  <header class="ai-teacher-header">
+    <div class="ai-teacher-avatar">🤖</div>
+    <div>
+      <h3>EduAhead AI Teacher</h3>
+      <p>Here to help you learn</p>
+    </div>
+    <button id="closeAiTeacher" class="ai-close"
+            aria-label="Close chat">×</button>
+  </header>
+
+  <div id="aiTeacherMessages" class="ai-teacher-messages"
+       aria-live="polite">
+    <div class="ai-message ai-bot">
+      Hello! 👋 I'm your AI Teacher. Ask me about Mathematics,
+      Science, English, or any topic you're studying.
+    </div>
+  </div>
+
+  <form id="aiTeacherForm" class="ai-teacher-form">
+    <input id="aiTeacherInput" type="text"
+           placeholder="Ask your teacher a question..."
+           autocomplete="off" required>
+    <button id="aiTeacherSend" type="submit">Send</button>
+  </form>
+</section>
+
+<link rel="stylesheet" href="ai-teacher.css">
+<script src="ai-teacher.js" defer></script>
+</body>
+</html>

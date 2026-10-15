@@ -1,0 +1,4025 @@
+{
+ "meta": {
+  "app": "EduAhead",
+  "schema": 2,
+  "rev": 3,
+  "curriculumStandard": "Akwa Ibom State Scheme of Work: Mathematics (JSS 1 to SSS 3) and English Language (JSS 1 to SSS 3)",
+  "sources": [
+   "https://schoolings.org/akwa-ibom-state-scheme-of-work-for-junior-secondary-schools/",
+   "https://schoolings.org/akwa-ibom-state-scheme-of-work-for-senior-secondary-schools-ss1-ss3-for-all-subjects/"
+  ],
+  "notes": [
+   "Third-party site reproducing the state scheme, not the Ministry's own file. Verify with your school.",
+   "M. and F. of whole numbers are read as Multiples and Factors.",
+   "SS1 to SS3 are stored as SSS 1 to SSS 3.",
+   "Topics with source 'NERDC-aligned outline' were not found in the Akwa Ibom source: Maths JSS 3 and SSS 3 third term, English JSS 3 and SSS 1 to SSS 3. English JSS 1 second term is only partly published."
+  ],
+  "levels": [
+   "JSS 1",
+   "JSS 2",
+   "JSS 3",
+   "SSS 1",
+   "SSS 2",
+   "SSS 3"
+  ],
+  "terms": [
+   "First Term",
+   "Second Term",
+   "Third Term"
+  ]
+ },
+ "users": [
+  {
+   "id": "u1",
+   "name": "Dr. Adebayo",
+   "role": "admin",
+   "email": "admin@school.ng",
+   "password": "admin123",
+   "status": "active"
+  },
+  {
+   "id": "u2",
+   "name": "Mr. Bello",
+   "role": "teacher",
+   "email": "teacher@school.ng",
+   "password": "teach123",
+   "status": "active",
+   "subjects": [
+    "math",
+    "english",
+    "science",
+    "digital"
+   ],
+   "classes": [
+    "JSS 1",
+    "JSS 2"
+   ]
+  },
+  {
+   "id": "u3",
+   "name": "Tola Student",
+   "role": "student",
+   "email": "student@school.ng",
+   "password": "learn123",
+   "status": "active",
+   "class": "JSS 1"
+  },
+  {
+   "id": "u4",
+   "name": "Mrs. Okoro",
+   "role": "parent",
+   "email": "parent@school.ng",
+   "password": "parent123",
+   "status": "active",
+   "children": [
+    "u3"
+   ]
+  }
+ ],
+ "subjects": [
+  {
+   "id": "math",
+   "name": "Mathematics",
+   "icon": "∑",
+   "color": "blue",
+   "description": "Build confidence with numbers, patterns, algebraic reasoning, and problem-solving.",
+   "topics": [
+    {
+     "id": "math-jss1-1",
+     "title": "Whole Numbers & Place Value",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 15,
+     "status": "ahead",
+     "summary": "Understand place value, ordering, and operations with large numbers.",
+     "objectives": [
+      "Read and write large whole numbers up to millions.",
+      "Compare and order integers correctly.",
+      "Apply the four basic arithmetic operations."
+     ],
+     "lesson": "Whole numbers are numbers used for counting, including 0, 1, 2, 3, and onwards. Place value dictates the worth of a digit based on its exact position (units, tens, hundreds, thousands, millions).",
+     "example": "In 4,582, the digit 4 represents 4,000, 5 represents 500, 8 represents 80, and 2 represents 2.",
+     "questions": [
+      {
+       "q": "What is the value of 7 in 3,742?",
+       "options": [
+        "7",
+        "70",
+        "700",
+        "7,000"
+       ],
+       "answer": 2,
+       "explain": "The 7 occupies the hundreds position, yielding 700."
+      },
+      {
+       "q": "Which number is greatest among 2,908, 2,980, and 2,890?",
+       "options": [
+        "2,908",
+        "2,980",
+        "2,890"
+       ],
+       "answer": 1,
+       "explain": "Comparing digits from left to right, 2,980 is the largest."
+      }
+     ],
+     "source": "Akwa Ibom State Scheme of Work + your lesson"
+    },
+    {
+     "id": "math-jss1-2",
+     "title": "Multiples of Whole Numbers",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Multiples of Whole Numbers: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Multiples of Whole Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-3",
+     "title": "Factors of Whole Numbers",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Factors of Whole Numbers: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Factors of Whole Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-4",
+     "title": "Fractions: Proper, Improper and Mixed Numbers",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Changing proper fractions to improper fractions and back, and improper fractions to mixed numbers.",
+     "objectives": [
+      "Explain the key ideas in Fractions: Proper, Improper and Mixed Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-5",
+     "title": "Fractions & Equivalent Fractions",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Learn how fractions represent parts of a whole and how to find equivalent fractions.",
+     "objectives": [
+      "Identify numerators and denominators.",
+      "Recognise and compute equivalent fractions.",
+      "Compare proper and improper fractions."
+     ],
+     "lesson": "A fraction represents a proportion of a whole. The numerator above the line specifies parts considered, while the denominator below specifies total equal divisions.",
+     "example": "In 3/4, the numerator is 3 and denominator is 4, representing three out of four equal parts.",
+     "questions": [
+      {
+       "q": "What is the denominator in 2/5?",
+       "options": [
+        "2",
+        "3",
+        "5",
+        "7"
+       ],
+       "answer": 2,
+       "explain": "The denominator is the bottom integer: 5."
+      }
+     ],
+     "source": "Akwa Ibom State Scheme of Work + your lesson"
+    },
+    {
+     "id": "math-jss1-6",
+     "title": "Addition and Subtraction of Fractions",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Addition and Subtraction of Fractions: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Addition and Subtraction of Fractions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-7",
+     "title": "Multiplication and Division of Fractions",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Multiplication and Division of Fractions: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Multiplication and Division of Fractions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-8",
+     "title": "BODMAS with Fractions",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "BODMAS with Fractions: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in BODMAS with Fractions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-9",
+     "title": "Estimation",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Estimation: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Estimation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-10",
+     "title": "Approximation",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Approximation: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Approximation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-11",
+     "title": "Number Bases: Changing to Binary",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Number Bases: Changing to Binary: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Number Bases: Changing to Binary.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-12",
+     "title": "Addition and Subtraction of Number Bases",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Addition and Subtraction of Number Bases: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Addition and Subtraction of Number Bases.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-13",
+     "title": "Multiplication of Number Bases",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Multiplication of Number Bases: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Multiplication of Number Bases.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-14",
+     "title": "Basic Operations and Place Value",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Basic Operations and Place Value: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Basic Operations and Place Value.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-15",
+     "title": "BODMAS",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "BODMAS: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in BODMAS.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-16",
+     "title": "Decimals: Addition and Subtraction",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Decimals: Addition and Subtraction: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Decimals: Addition and Subtraction.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-17",
+     "title": "Algebraic Processes",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Algebraic Processes: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Algebraic Processes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-18",
+     "title": "Word Problems in Algebra",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Word Problems in Algebra: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Word Problems in Algebra.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-19",
+     "title": "Word Problems in Symbolic Terms",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Word Problems in Symbolic Terms: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Word Problems in Symbolic Terms.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-20",
+     "title": "Simple Equations",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simple Equations: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Simple Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-21",
+     "title": "Statistics",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Statistics: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Statistics.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-22",
+     "title": "Averages",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Averages: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Averages.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-23",
+     "title": "Plane Shapes (Geometry)",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Plane Shapes (Geometry): JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Plane Shapes (Geometry).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-24",
+     "title": "Solid Shapes",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Solid Shapes: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Solid Shapes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-25",
+     "title": "Angles",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angles: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Angles.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss1-26",
+     "title": "Construction",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Construction: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Construction.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-1",
+     "title": "Whole Numbers and Decimal Numbers",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Whole Numbers and Decimal Numbers: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Whole Numbers and Decimal Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-2",
+     "title": "Prime Factors",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Prime Factors: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Prime Factors.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-3",
+     "title": "Multiples of Whole Numbers",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Multiples of Whole Numbers: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Multiples of Whole Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-4",
+     "title": "Factors of Whole Numbers",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Factors of Whole Numbers: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Factors of Whole Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-5",
+     "title": "Square Root",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Square Root: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Square Root.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-6",
+     "title": "Fractions: Ratios, Decimals and Percentages",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Fractions: Ratios, Decimals and Percentages: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Fractions: Ratios, Decimals and Percentages.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-7",
+     "title": "Commercial Arithmetic",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Commercial Arithmetic: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Commercial Arithmetic.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-8",
+     "title": "Approximation",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Approximation: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Approximation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-9",
+     "title": "Multiplication and Division of Directed Numbers",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Multiplication and Division of Directed Numbers: JSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Multiplication and Division of Directed Numbers.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-10",
+     "title": "Algebraic Expressions I",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Algebraic Expressions I: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Algebraic Expressions I.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-11",
+     "title": "Algebraic Expressions II",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Algebraic Expressions II: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Algebraic Expressions II.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-12",
+     "title": "Simple Equations",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simple Equations: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Simple Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-13",
+     "title": "Linear Inequalities",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Linear Inequalities: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Linear Inequalities.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-14",
+     "title": "Graphs of Linear Inequalities",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Graphs of Linear Inequalities: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Graphs of Linear Inequalities.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-15",
+     "title": "Plane Shapes",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Plane Shapes: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Plane Shapes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-16",
+     "title": "Scale Drawing",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Scale Drawing: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Scale Drawing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-17",
+     "title": "Estimation",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Estimation: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Estimation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-18",
+     "title": "Angles between Lines",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angles between Lines: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Angles between Lines.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-19",
+     "title": "Angles in a Polygon",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angles in a Polygon: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Angles in a Polygon.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-20",
+     "title": "Pythagoras Theorem",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Pythagoras Theorem: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Pythagoras Theorem.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-21",
+     "title": "Statistics",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Statistics: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Statistics.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-22",
+     "title": "Probability",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Probability: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Probability.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-23",
+     "title": "Area and Volume of a Cylinder",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Area and Volume of a Cylinder: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Area and Volume of a Cylinder.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-24",
+     "title": "Volume of a Cone",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Volume of a Cone: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Volume of a Cone.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss2-25",
+     "title": "Mean, Median and Mode",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Mean, Median and Mode: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Mean, Median and Mode.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-1",
+     "title": "Number Bases: Converting Decimal to Other Bases and Back",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Number Bases: Converting Decimal to Other Bases and Back: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Number Bases: Converting Decimal to Other Bases and Back.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-2",
+     "title": "Number Bases: Multiplication and Division in Non-decimal Bases",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Number Bases: Multiplication and Division in Non-decimal Bases: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Number Bases: Multiplication and Division in Non-decimal Bases.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-3",
+     "title": "Computer Application: Punch Cards and Coded Information",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Computer Application: Punch Cards and Coded Information: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Computer Application: Punch Cards and Coded Information.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-4",
+     "title": "Word Problems: Translating into Numerical Expressions",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Word Problems: Translating into Numerical Expressions: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Word Problems: Translating into Numerical Expressions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-5",
+     "title": "Proportion and Variation",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Direct and inverse proportion, direct and inverse variation, joint and partial variation.",
+     "objectives": [
+      "Explain the key ideas in Proportion and Variation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-6",
+     "title": "Approximation: Decimal Places and Significant Figures",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Approximation: Decimal Places and Significant Figures: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Approximation: Decimal Places and Significant Figures.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-7",
+     "title": "Factorization",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Removing brackets, common factors, quadratic expressions, perfect squares and difference of two squares.",
+     "objectives": [
+      "Explain the key ideas in Factorization.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-8",
+     "title": "Simple Equations Involving Fractions",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simple Equations Involving Fractions: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Simple Equations Involving Fractions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-9",
+     "title": "Word Problems Leading to Equations",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Word Problems Leading to Equations: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Word Problems Leading to Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-10",
+     "title": "Simultaneous Equations: Elimination and Substitution",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simultaneous Equations: Elimination and Substitution: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Simultaneous Equations: Elimination and Substitution.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-11",
+     "title": "Simultaneous Equations: Graphical Method and Word Problems",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simultaneous Equations: Graphical Method and Word Problems: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Simultaneous Equations: Graphical Method and Word Problems.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-12",
+     "title": "Similar Shapes",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Similar Shapes: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Similar Shapes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-13",
+     "title": "Change of Subject of a Formula",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Change of Subject of a Formula: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Change of Subject of a Formula.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-14",
+     "title": "Trigonometry: Tangent of Angles",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Tangent of Angles: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Tangent of Angles.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-15",
+     "title": "Trigonometry: Sine and Cosine of Angles",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Sine and Cosine of Angles: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Sine and Cosine of Angles.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-16",
+     "title": "Construction: Bisection and Angles 90, 45, 60 and 30 Degrees",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Construction: Bisection and Angles 90, 45, 60 and 30 Degrees: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Construction: Bisection and Angles 90, 45, 60 and 30 Degrees.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-17",
+     "title": "Statistics: Mean, Median, Mode and Pie Charts",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Statistics: Mean, Median, Mode and Pie Charts: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Statistics: Mean, Median, Mode and Pie Charts.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-jss3-18",
+     "title": "Mensuration: Area and Volume",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Mensuration: Area and Volume: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Mensuration: Area and Volume.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "math-jss3-19",
+     "title": "Probability",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Probability: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Probability.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "math-jss3-20",
+     "title": "BECE Revision",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "BECE Revision: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in BECE Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "math-sss1-1",
+     "title": "Number Base System",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Conversion from one base to base 10 and to other bases, decimal fractions, and the four operations in number bases.",
+     "objectives": [
+      "Explain the key ideas in Number Base System.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-2",
+     "title": "Modular Arithmetic",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Concept of modular arithmetic, addition, subtraction and multiplication, and solving real-life problems.",
+     "objectives": [
+      "Explain the key ideas in Modular Arithmetic.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-3",
+     "title": "Indices",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Standard form, laws of indices and indicial equations.",
+     "objectives": [
+      "Explain the key ideas in Indices.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-4",
+     "title": "Logarithms and Indices",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Logarithm as the inverse of indices, laws of logarithms, tables and graph of y = 10^x.",
+     "objectives": [
+      "Explain the key ideas in Logarithms and Indices.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-5",
+     "title": "Sets",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Set notation, types of sets, set operations and Venn diagrams.",
+     "objectives": [
+      "Explain the key ideas in Sets.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-6",
+     "title": "Simple Equations and Variations",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Change of subject of formulae, direct, inverse, joint and partial variation.",
+     "objectives": [
+      "Explain the key ideas in Simple Equations and Variations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-7",
+     "title": "Quadratic Equations",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Factorization, completing the square, formula and graphical methods.",
+     "objectives": [
+      "Explain the key ideas in Quadratic Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-8",
+     "title": "Logical Reasoning",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simple and compound statements.",
+     "objectives": [
+      "Explain the key ideas in Logical Reasoning.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-9",
+     "title": "Construction of Angles and Loci",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angles 30, 45, 60 and 90 degrees, triangles, equidistance from points and lines, locus.",
+     "objectives": [
+      "Explain the key ideas in Construction of Angles and Loci.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-10",
+     "title": "Proofs of Basic Theorems in Euclidean Geometry",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angle sum of a triangle and the exterior angle theorem.",
+     "objectives": [
+      "Explain the key ideas in Proofs of Basic Theorems in Euclidean Geometry.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-11",
+     "title": "Riders",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Angles on parallel lines, polygons, congruent triangles, parallelograms and the intercept theorem.",
+     "objectives": [
+      "Explain the key ideas in Riders.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-12",
+     "title": "Trigonometric Ratios: Right-angled Triangles",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometric Ratios: Right-angled Triangles: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometric Ratios: Right-angled Triangles.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-13",
+     "title": "Trigonometry: Ratios of 30, 45 and 60 Degrees",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Ratios of 30, 45 and 60 Degrees: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Ratios of 30, 45 and 60 Degrees.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-14",
+     "title": "Trigonometry: Angles of Elevation and Depression",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Angles of Elevation and Depression: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Angles of Elevation and Depression.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-15",
+     "title": "Trigonometric Ratios and the Unit Circle",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometric Ratios and the Unit Circle: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometric Ratios and the Unit Circle.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-16",
+     "title": "Graphs of Sines and Cosines",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Graphs of Sines and Cosines: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Graphs of Sines and Cosines.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-17",
+     "title": "Length of Arc of a Circle",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Length of Arc of a Circle: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Length of Arc of a Circle.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-18",
+     "title": "Perimeters of Sectors and Segments",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Perimeters of Sectors and Segments: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Perimeters of Sectors and Segments.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-19",
+     "title": "Areas of Sectors of a Circle",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Areas of Sectors of a Circle: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Areas of Sectors of a Circle.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-20",
+     "title": "Areas of Segments of a Circle",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Areas of Segments of a Circle: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Areas of Segments of a Circle.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-21",
+     "title": "Sectors of a Circle and the Surface of a Cone",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Sectors of a Circle and the Surface of a Cone: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Sectors of a Circle and the Surface of a Cone.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-22",
+     "title": "Surface Area and Volume of Solid Shapes",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Cube, cuboid, cylinder, pyramid, cone and prism.",
+     "objectives": [
+      "Explain the key ideas in Surface Area and Volume of Solid Shapes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-23",
+     "title": "Surface Area and Volume of Fractions of Cones and Pyramids",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Surface Area and Volume of Fractions of Cones and Pyramids: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Surface Area and Volume of Fractions of Cones and Pyramids.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-24",
+     "title": "Surface Area and Volume of Compound Shapes",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Surface Area and Volume of Compound Shapes: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Surface Area and Volume of Compound Shapes.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-25",
+     "title": "Data Presentation and Frequency Tables",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Data Presentation and Frequency Tables: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Data Presentation and Frequency Tables.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-26",
+     "title": "Linear Graph, Bar Chart and Histogram",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Linear Graph, Bar Chart and Histogram: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Linear Graph, Bar Chart and Histogram.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss1-27",
+     "title": "Pie Chart and Frequency Polygon",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Pie Chart and Frequency Polygon: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Pie Chart and Frequency Polygon.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-1",
+     "title": "Logarithms",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Logarithms: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Logarithms.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-2",
+     "title": "Approximations and Accuracy",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Approximations and Accuracy: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Approximations and Accuracy.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-3",
+     "title": "Sequences and Series",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Sequences and Series: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Sequences and Series.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-4",
+     "title": "Quadratic Equations",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Quadratic Equations: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Quadratic Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-5",
+     "title": "Simultaneous Linear and Quadratic Equations",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simultaneous Linear and Quadratic Equations: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Simultaneous Linear and Quadratic Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-6",
+     "title": "Gradient of a Curve and Lines",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Gradient of a Curve and Lines: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Gradient of a Curve and Lines.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-7",
+     "title": "Logical Reasoning",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Logical Reasoning: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Logical Reasoning.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-8",
+     "title": "Gradient of a Curve by Graph Reading",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Gradient of a Curve by Graph Reading: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Gradient of a Curve by Graph Reading.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-9",
+     "title": "Linear Inequalities",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Linear Inequalities: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Linear Inequalities.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-10",
+     "title": "Algebraic Fractions",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Algebraic Fractions: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Algebraic Fractions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-11",
+     "title": "Chord Properties (Circle Geometry I)",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Chord Properties (Circle Geometry I): SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Chord Properties (Circle Geometry I).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-12",
+     "title": "Circle Theorems (Circle Geometry II)",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Circle Theorems (Circle Geometry II): SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Circle Theorems (Circle Geometry II).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-13",
+     "title": "Trigonometry: Sine Rule",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Sine Rule: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Sine Rule.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-14",
+     "title": "Trigonometry: Cosine Rule",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometry: Cosine Rule: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometry: Cosine Rule.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-15",
+     "title": "Trigonometric Ratios (Revision) and Angles of Elevation and Depression",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Trigonometric Ratios (Revision) and Angles of Elevation and Depression: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Trigonometric Ratios (Revision) and Angles of Elevation and Depression.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-16",
+     "title": "Bearings",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Bearings: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Bearings.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-17",
+     "title": "Statistics: Grouped Data",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Statistics: Grouped Data: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Statistics: Grouped Data.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss2-18",
+     "title": "Probability",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Probability: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Probability.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "math-sss3-1",
+     "title": "Surds",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Surds: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Surds.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "math-sss3-2",
+     "title": "Matrices and Determinants",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Matrices and Determinants: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Matrices and Determinants.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "math-sss3-3",
+     "title": "Logarithms (Revision)",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Logarithms (Revision): SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Logarithms (Revision).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "math-sss3-4",
+     "title": "Commercial Arithmetic",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Commercial Arithmetic: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Commercial Arithmetic.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "math-sss3-5",
+     "title": "Simultaneous, Linear and Quadratic Equations (Revision)",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Simultaneous, Linear and Quadratic Equations (Revision): SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Simultaneous, Linear and Quadratic Equations (Revision).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "11"
+    },
+    {
+     "id": "math-sss3-6",
+     "title": "Graphs of Trigonometric Ratios",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Graphs of Trigonometric Ratios: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Graphs of Trigonometric Ratios.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "math-sss3-7",
+     "title": "Graphical Solution of Simultaneous Linear and Trigonometric Equations",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Graphical Solution of Simultaneous Linear and Trigonometric Equations: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Graphical Solution of Simultaneous Linear and Trigonometric Equations.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "math-sss3-8",
+     "title": "Surface Area of a Sphere",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Surface Area of a Sphere: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Surface Area of a Sphere.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "math-sss3-9",
+     "title": "Volume of a Sphere",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Volume of a Sphere: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Volume of a Sphere.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "math-sss3-10",
+     "title": "Longitude and Latitude",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Longitude and Latitude: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Longitude and Latitude.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "math-sss3-11",
+     "title": "Coordinate Geometry of Straight Lines",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Coordinate Geometry of Straight Lines: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Coordinate Geometry of Straight Lines.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "6"
+    },
+    {
+     "id": "math-sss3-12",
+     "title": "Gradients and Intercepts of a Straight Line",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Gradients and Intercepts of a Straight Line: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Gradients and Intercepts of a Straight Line.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "7"
+    },
+    {
+     "id": "math-sss3-13",
+     "title": "Differentiation of Algebraic Functions",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Differentiation of Algebraic Functions: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Differentiation of Algebraic Functions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "8"
+    },
+    {
+     "id": "math-sss3-14",
+     "title": "Integration of Simple Algebraic Functions",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Integration of Simple Algebraic Functions: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Integration of Simple Algebraic Functions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "9"
+    },
+    {
+     "id": "math-sss3-15",
+     "title": "Arc Length of a Curve",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Arc Length of a Curve: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Arc Length of a Curve.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "10"
+    },
+    {
+     "id": "math-sss3-16",
+     "title": "WAEC/NECO Past Questions I",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "WAEC/NECO Past Questions I: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in WAEC/NECO Past Questions I.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "math-sss3-17",
+     "title": "WAEC/NECO Past Questions II",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "WAEC/NECO Past Questions II: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in WAEC/NECO Past Questions II.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "math-sss3-18",
+     "title": "Final Revision",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Final Revision: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Final Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    }
+   ]
+  },
+  {
+   "id": "english",
+   "name": "English Language",
+   "icon": "Aa",
+   "color": "purple",
+   "description": "Strengthen speech work, grammar, vocabulary, reading, writing and literature.",
+   "topics": [
+    {
+     "id": "english-jss1-1",
+     "title": "Speech Production, Building Vocabulary and Introduction to Literature",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Speech Production, Building Vocabulary and Introduction to Literature: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Speech Production, Building Vocabulary and Introduction to Literature.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "english-jss1-2",
+     "title": "Vowel Sounds, Transport Vocabulary and Genres of Literature",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Vowel Sounds, Transport Vocabulary and Genres of Literature: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Vowel Sounds, Transport Vocabulary and Genres of Literature.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "english-jss1-3",
+     "title": "Adjectives, Consonants /f/ and /v/ and Features of Drama",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Adjectives, Consonants /f/ and /v/ and Features of Drama: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Adjectives, Consonants /f/ and /v/ and Features of Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "english-jss1-4",
+     "title": "Nouns, Home and Family Vocabulary and Figures of Speech",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Nouns, Home and Family Vocabulary and Figures of Speech: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Nouns, Home and Family Vocabulary and Figures of Speech.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "english-jss1-5",
+     "title": "Composition: Simple Sentences and Paragraphing",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Composition: Simple Sentences and Paragraphing: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Composition: Simple Sentences and Paragraphing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "english-jss1-6",
+     "title": "The Simple English Sentence and Poem Analysis",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "The Simple English Sentence and Poem Analysis: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in The Simple English Sentence and Poem Analysis.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "6"
+    },
+    {
+     "id": "english-jss1-7",
+     "title": "Noun Phrases, Quantifiers, Consonants /p/ and /b/ and Folklore",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Noun Phrases, Quantifiers, Consonants /p/ and /b/ and Folklore: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Noun Phrases, Quantifiers, Consonants /p/ and /b/ and Folklore.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "7"
+    },
+    {
+     "id": "english-jss1-8",
+     "title": "Verbs and School Vocabulary",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Verbs and School Vocabulary: JSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Verbs and School Vocabulary.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "8"
+    },
+    {
+     "id": "english-jss1-9",
+     "title": "Informal Letters",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Informal Letters: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Informal Letters.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "english-jss1-10",
+     "title": "Consonants /t/ and /d/",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Consonants /t/ and /d/: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Consonants /t/ and /d/.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "english-jss1-11",
+     "title": "Articles",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Articles: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Articles.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "english-jss1-12",
+     "title": "Play Analysis: Tears of a Bride",
+     "term": "Second Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Play Analysis: Tears of a Bride: JSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Play Analysis: Tears of a Bride.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work"
+    },
+    {
+     "id": "english-jss1-13",
+     "title": "Subject and Object Pronouns, Possession and Debate Writing",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Subject and Object Pronouns, Possession and Debate Writing: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Subject and Object Pronouns, Possession and Debate Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "english-jss1-14",
+     "title": "Vowels, Singular and Plural Verbs, the Verb Phrase and Prepositions",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Vowels, Singular and Plural Verbs, the Verb Phrase and Prepositions: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Vowels, Singular and Plural Verbs, the Verb Phrase and Prepositions.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "english-jss1-15",
+     "title": "Partitives, Narrative Essay and Legends",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Partitives, Narrative Essay and Legends: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Partitives, Narrative Essay and Legends.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "english-jss1-16",
+     "title": "Adverbs and Adverbials, Consonants /k/ and /g/ and Consonant Clusters",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Adverbs and Adverbials, Consonants /k/ and /g/ and Consonant Clusters: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Adverbs and Adverbials, Consonants /k/ and /g/ and Consonant Clusters.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "english-jss1-17",
+     "title": "Thematic Analysis: The Founding of Benin Kingdom",
+     "term": "Third Term",
+     "level": "JSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Thematic Analysis: The Founding of Benin Kingdom: JSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Thematic Analysis: The Founding of Benin Kingdom.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "english-jss2-1",
+     "title": "Revision of Vowels, Parts of Speech and Reading Comprehension",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Also: negative statements, health vocabulary, prose chapters I and II.",
+     "objectives": [
+      "Explain the key ideas in Revision of Vowels, Parts of Speech and Reading Comprehension.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "english-jss2-2",
+     "title": "Intonation, Yes/No and Tag Questions and Guided Composition",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Falling and rising intonation, health words, titles, capital letters and punctuation, chapters 3 to 5.",
+     "objectives": [
+      "Explain the key ideas in Intonation, Yes/No and Tag Questions and Guided Composition.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "english-jss2-3",
+     "title": "Vowels, Plural Nouns and Countable/Uncountable Nouns",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Administrative vocabulary, chapters 6 to 8.",
+     "objectives": [
+      "Explain the key ideas in Vowels, Plural Nouns and Countable/Uncountable Nouns.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "english-jss2-4",
+     "title": "Consonants, Commands and Continuous Writing (Linkers)",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Administrative vocabulary, themes, characters and plot of the novel.",
+     "objectives": [
+      "Explain the key ideas in Consonants, Commands and Continuous Writing (Linkers).",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "english-jss2-5",
+     "title": "Intonation in Commands and Questions, Wh-Questions and Reading for Meaning",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Facts and opinion, drama forms, elements and dramatic devices.",
+     "objectives": [
+      "Explain the key ideas in Intonation in Commands and Questions, Wh-Questions and Reading for Meaning.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "english-jss2-6",
+     "title": "Requests, Banking and Religion Vocabulary and Poetry",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Poetic devices, types of poem, the poem The Land of Unease.",
+     "objectives": [
+      "Explain the key ideas in Requests, Banking and Religion Vocabulary and Poetry.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "6"
+    },
+    {
+     "id": "english-jss2-7",
+     "title": "Consonants, Informal Letters, Reading for Speed and Reported Statements",
+     "term": "First Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Drama.",
+     "objectives": [
+      "Explain the key ideas in Consonants, Informal Letters, Reading for Speed and Reported Statements.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "7"
+    },
+    {
+     "id": "english-jss2-8",
+     "title": "Consonant Clusters, Reporting Questions and Government and Politics",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Exposition: the Atmosphere, prose.",
+     "objectives": [
+      "Explain the key ideas in Consonant Clusters, Reporting Questions and Government and Politics.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "english-jss2-9",
+     "title": "Diphthongs, Reporting Commands and Requests and Exposition",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Government and politics, prose.",
+     "objectives": [
+      "Explain the key ideas in Diphthongs, Reporting Commands and Requests and Exposition.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "english-jss2-10",
+     "title": "Diphthongs, Comparative and Superlative Adjectives and Persuasion",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Government and politics, reading comprehension, prose.",
+     "objectives": [
+      "Explain the key ideas in Diphthongs, Comparative and Superlative Adjectives and Persuasion.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "english-jss2-11",
+     "title": "Weak Forms, Intensifiers and Formal Letters",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Law and order, prose.",
+     "objectives": [
+      "Explain the key ideas in Weak Forms, Intensifiers and Formal Letters.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "english-jss2-12",
+     "title": "Word Boundary, Adverbs and Argument",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Law and order, poetry.",
+     "objectives": [
+      "Explain the key ideas in Word Boundary, Adverbs and Argument.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "english-jss2-13",
+     "title": "Compound Words, Prepositions of Place and Reading for Meaning",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Poetry, formal letters.",
+     "objectives": [
+      "Explain the key ideas in Compound Words, Prepositions of Place and Reading for Meaning.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "6"
+    },
+    {
+     "id": "english-jss2-14",
+     "title": "Drama",
+     "term": "Second Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Drama: JSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "7"
+    },
+    {
+     "id": "english-jss2-15",
+     "title": "Phrases Used in Speech, Future Adverbials and Mass Media",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Towards summary, prose.",
+     "objectives": [
+      "Explain the key ideas in Phrases Used in Speech, Future Adverbials and Mass Media.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "1"
+    },
+    {
+     "id": "english-jss2-16",
+     "title": "Question Tags, Adverbs of Frequency and Mass Media",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Towards summary, prose.",
+     "objectives": [
+      "Explain the key ideas in Question Tags, Adverbs of Frequency and Mass Media.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "2"
+    },
+    {
+     "id": "english-jss2-17",
+     "title": "Mixed Vowels and Diphthongs, Cause and Reason and Report Writing",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Petroleum and mining, prose.",
+     "objectives": [
+      "Explain the key ideas in Mixed Vowels and Diphthongs, Cause and Reason and Report Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "3"
+    },
+    {
+     "id": "english-jss2-18",
+     "title": "Consonant Clusters, Expressing Purpose and Summary",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Petroleum and mining.",
+     "objectives": [
+      "Explain the key ideas in Consonant Clusters, Expressing Purpose and Summary.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "4"
+    },
+    {
+     "id": "english-jss2-19",
+     "title": "Strong and Weak Forms, Conditional Forms and Continuous Writing",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Petroleum vocabulary, My School or A Market, prose.",
+     "objectives": [
+      "Explain the key ideas in Strong and Weak Forms, Conditional Forms and Continuous Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "5"
+    },
+    {
+     "id": "english-jss2-20",
+     "title": "Contrasting Statements, Cake Making and Letter Writing",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Formal and informal letters, drama.",
+     "objectives": [
+      "Explain the key ideas in Contrasting Statements, Cake Making and Letter Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "6"
+    },
+    {
+     "id": "english-jss2-21",
+     "title": "Poem, Reading Comprehension and Drama",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Poem, Reading Comprehension and Drama: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Poem, Reading Comprehension and Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "7"
+    },
+    {
+     "id": "english-jss2-22",
+     "title": "Active and Passive Verbs, Rhyme and Rhythm in Poems and Drama",
+     "term": "Third Term",
+     "level": "JSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Active and Passive Verbs, Rhyme and Rhythm in Poems and Drama: JSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Active and Passive Verbs, Rhyme and Rhythm in Poems and Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "Akwa Ibom State Scheme of Work",
+     "week": "8"
+    },
+    {
+     "id": "english-jss3-1",
+     "title": "Reported Speech",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Reported Speech: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Reported Speech.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-2",
+     "title": "Argumentative Essay",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Argumentative Essay: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Argumentative Essay.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-3",
+     "title": "Comprehension and Summary",
+     "term": "First Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Comprehension and Summary: JSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Comprehension and Summary.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-4",
+     "title": "Idioms and Proverbs",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Idioms and Proverbs: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Idioms and Proverbs.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-5",
+     "title": "Report Writing",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Report Writing: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Report Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-6",
+     "title": "Oral English: Vowels",
+     "term": "Second Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Oral English: Vowels: JSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Oral English: Vowels.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-7",
+     "title": "Poetry Appreciation",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Poetry Appreciation: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Poetry Appreciation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-8",
+     "title": "Drama",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Drama: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-jss3-9",
+     "title": "Grammar Revision",
+     "term": "Third Term",
+     "level": "JSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Grammar Revision: JSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Grammar Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-1",
+     "title": "Narrative and Descriptive Essays",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Narrative and Descriptive Essays: SSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Narrative and Descriptive Essays.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-2",
+     "title": "Lexis and Structure",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Lexis and Structure: SSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Lexis and Structure.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-3",
+     "title": "Oral English: Consonants",
+     "term": "First Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Oral English: Consonants: SSS 1, First Term.",
+     "objectives": [
+      "Explain the key ideas in Oral English: Consonants.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-4",
+     "title": "Argumentative and Expository Essays",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Argumentative and Expository Essays: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Argumentative and Expository Essays.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-5",
+     "title": "Comprehension and Summary",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Comprehension and Summary: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Comprehension and Summary.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-6",
+     "title": "Figures of Speech",
+     "term": "Second Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Figures of Speech: SSS 1, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Figures of Speech.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-7",
+     "title": "Formal Letter Writing",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Formal Letter Writing: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Formal Letter Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-8",
+     "title": "Register",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Register: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Register.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss1-9",
+     "title": "Literature: Prose",
+     "term": "Third Term",
+     "level": "SSS 1",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Literature: Prose: SSS 1, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Literature: Prose.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-1",
+     "title": "Speech Writing",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Speech Writing: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Speech Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-2",
+     "title": "Synonyms and Antonyms",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Synonyms and Antonyms: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Synonyms and Antonyms.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-3",
+     "title": "Stress and Intonation",
+     "term": "First Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Stress and Intonation: SSS 2, First Term.",
+     "objectives": [
+      "Explain the key ideas in Stress and Intonation.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-4",
+     "title": "Article Writing",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Article Writing: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Article Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-5",
+     "title": "Summary Skills",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Summary Skills: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Summary Skills.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-6",
+     "title": "Literature: Poetry",
+     "term": "Second Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Literature: Poetry: SSS 2, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Literature: Poetry.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-7",
+     "title": "Debate and Report Writing",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Debate and Report Writing: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Debate and Report Writing.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-8",
+     "title": "Concord Revision",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Concord Revision: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Concord Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss2-9",
+     "title": "Literature: Drama",
+     "term": "Third Term",
+     "level": "SSS 2",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Literature: Drama: SSS 2, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Literature: Drama.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-1",
+     "title": "Exam Essay Techniques",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Exam Essay Techniques: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Exam Essay Techniques.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-2",
+     "title": "Comprehension Practice",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Comprehension Practice: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Comprehension Practice.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-3",
+     "title": "Oral English Revision",
+     "term": "First Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Oral English Revision: SSS 3, First Term.",
+     "objectives": [
+      "Explain the key ideas in Oral English Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-4",
+     "title": "Summary Practice",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Summary Practice: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Summary Practice.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-5",
+     "title": "Lexis Revision",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Lexis Revision: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Lexis Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-6",
+     "title": "Literature Revision",
+     "term": "Second Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Literature Revision: SSS 3, Second Term.",
+     "objectives": [
+      "Explain the key ideas in Literature Revision.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-7",
+     "title": "Past Questions: Essay",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Past Questions: Essay: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Past Questions: Essay.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-8",
+     "title": "Past Questions: Comprehension",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Past Questions: Comprehension: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Past Questions: Comprehension.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    },
+    {
+     "id": "english-sss3-9",
+     "title": "Past Questions: Oral English",
+     "term": "Third Term",
+     "level": "SSS 3",
+     "minutes": 20,
+     "status": "upcoming",
+     "summary": "Past Questions: Oral English: SSS 3, Third Term.",
+     "objectives": [
+      "Explain the key ideas in Past Questions: Oral English.",
+      "Work through the examples step by step.",
+      "Answer practice questions and review mistakes."
+     ],
+     "lesson": "Your teacher is preparing the full lesson note for this topic. Preview the objectives now and ask questions in class.",
+     "example": "Worked examples will be added by your teacher.",
+     "questions": [],
+     "source": "NERDC-aligned outline (not in the Akwa Ibom source found)"
+    }
+   ]
+  },
+  {
+   "id": "science",
+   "name": "Intermediate Science",
+   "icon": "⚗",
+   "color": "green",
+   "description": "Explore living organisms, matter, energy, and environmental sustainability.",
+   "topics": [
+    {
+     "id": "sci-jss1-1",
+     "title": "Living & Non-Living Things",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 15,
+     "summary": "Identify characteristics of living things and classify matter.",
+     "objectives": [
+      "Distinguish biotic factors from abiotic objects.",
+      "List life processes (Movement, Respiration, Nutrition, etc.).",
+      "Classify everyday specimens."
+     ],
+     "lesson": "Living things carry out life processes such as nutrition, respiration, growth, excretion, sensitivity, movement, and reproduction. Non-living items lack these independent biological characteristics.",
+     "example": "A sprouting mango tree is living because it undergoes growth and cellular respiration. A stone is non-living.",
+     "questions": [
+      {
+       "q": "Which of these is a living organism?",
+       "options": [
+        "Stone",
+        "Plastic cup",
+        "Mango tree",
+        "Pencil"
+       ],
+       "answer": 2,
+       "explain": "A mango tree grows and performs life processes."
+      }
+     ],
+     "status": "ahead"
+    }
+   ]
+  },
+  {
+   "id": "digital",
+   "name": "Digital Technologies",
+   "icon": "💻",
+   "color": "purple",
+   "description": "Master essential computing, internet safety, and foundational algorithmic thinking.",
+   "topics": [
+    {
+     "id": "dig-jss1-1",
+     "title": "Introduction to Computer Systems",
+     "term": "First Term",
+     "level": "JSS 1",
+     "minutes": 15,
+     "summary": "Understand hardware, software, and basic safe computing practices.",
+     "objectives": [
+      "Identify input and output hardware devices.",
+      "Understand the role of operating systems.",
+      "Practice safe internet navigation habits."
+     ],
+     "lesson": "A computer system consists of hardware (physical components you can touch) and software (programs and instructions that tell hardware what to do).",
+     "example": "A keyboard and mouse are input devices, a monitor and printer are output devices.",
+     "questions": [
+      {
+       "q": "Which of the following is an input device?",
+       "options": [
+        "Monitor",
+        "Printer",
+        "Keyboard",
+        "Speaker"
+       ],
+       "answer": 2,
+       "explain": "A keyboard allows data entry into the computer system."
+      }
+     ],
+     "status": "upcoming"
+    }
+   ]
+  }
+ ],
+ "progress": [],
+ "attempts": [],
+ "reports": [],
+ "audit": []
+}
