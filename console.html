@@ -1,34 +1,698 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#175cd3">
+  <meta name="description" content="EduAhead staff dashboard for monitoring student learning and progress.">
+  <link rel="shortcut icon" href="logo.png" type="image/png">
   <title>EduAhead — Staff Console</title>
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Staff Console enhancements */
+    :root {
+      --staff-blue: #175cd3;
+      --staff-bg: #f6f8fc;
+      --staff-border: #e7ebf2;
+      --staff-text: #182230;
+      --staff-muted: #667085;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--staff-bg);
+      color: var(--staff-text);
+      font-family: "DM Sans", Arial, sans-serif;
+    }
+
+    .staff-console {
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .staff-console .sidebar {
+      z-index: 1000;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .staff-console .main-area {
+      min-width: 0;
+    }
+
+    .staff-console .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 76px;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--staff-border);
+      backdrop-filter: blur(12px);
+    }
+
+    .staff-console .topbar-left,
+    .staff-console .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .staff-console .breadcrumb {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .staff-console .content {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 24px;
+      min-width: 0;
+    }
+
+    .staff-console button,
+    .staff-console input,
+    .staff-console select {
+      font: inherit;
+    }
+
+    .staff-console button {
+      cursor: pointer;
+    }
+
+    .staff-console button:focus-visible,
+    .staff-console input:focus-visible,
+    .staff-console select:focus-visible {
+      outline: 3px solid rgba(23, 92, 211, 0.35);
+      outline-offset: 3px;
+    }
+
+    .staff-menu-toggle {
+      display: none;
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--staff-border);
+      border-radius: 10px;
+      background: white;
+      color: var(--staff-text);
+      font-size: 22px;
+    }
+
+    .staff-overlay {
+      display: none;
+    }
+
+    .staff-live-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--staff-border);
+      border-radius: 999px;
+      background: white;
+      color: var(--staff-muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .staff-live-dot {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      border-radius: 50%;
+      background: #98a2b3;
+    }
+
+    .staff-live-indicator[data-status="connected"] .staff-live-dot {
+      background: #12a76f;
+    }
+
+    .staff-live-indicator[data-status="error"] .staff-live-dot {
+      background: #f04438;
+    }
+
+    .staff-overview {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .staff-panel {
+      min-width: 0;
+      padding: 20px;
+      border: 1px solid var(--staff-border);
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 3px 12px rgba(16, 24, 40, 0.035);
+    }
+
+    .staff-panel h2,
+    .staff-panel h3 {
+      margin-top: 0;
+    }
+
+    .staff-panel h2 {
+      font-size: 18px;
+    }
+
+    .staff-stat-label {
+      color: var(--staff-muted);
+      font-size: 13px;
+    }
+
+    .staff-stat-value {
+      margin: 10px 0 6px;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+      overflow-wrap: anywhere;
+    }
+
+    .staff-note {
+      color: var(--staff-muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .staff-section-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .staff-section-heading h2 {
+      margin: 0;
+      font-size: 19px;
+    }
+
+    .staff-search {
+      width: min(100%, 340px);
+      min-height: 42px;
+      padding: 10px 12px;
+      border: 1px solid var(--staff-border);
+      border-radius: 10px;
+      background: white;
+      color: var(--staff-text);
+    }
+
+    .staff-activity-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .staff-activity-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--staff-border);
+      overflow-wrap: anywhere;
+    }
+
+    .staff-activity-item:last-child {
+      border-bottom: 0;
+    }
+
+    .staff-activity-icon {
+      display: grid;
+      flex: 0 0 38px;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 11px;
+      background: #eef4ff;
+      color: var(--staff-blue);
+    }
+
+    .staff-activity-copy {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .staff-activity-copy p {
+      margin: 0 0 5px;
+      line-height: 1.5;
+    }
+
+    .staff-activity-copy small {
+      color: var(--staff-muted);
+    }
+
+    .staff-empty {
+      padding: 24px 12px;
+      color: var(--staff-muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .staff-footer {
+      padding: 16px 24px 24px;
+      color: var(--staff-muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* Keep generated app content from overflowing */
+    .staff-console img,
+    .staff-console canvas,
+    .staff-console video {
+      max-width: 100%;
+    }
+
+    .staff-console table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .staff-console .content > * {
+      max-width: 100%;
+    }
+
+    @media (max-width: 1100px) {
+      .staff-console .content {
+        padding: 20px;
+      }
+
+      .staff-overview {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 800px) {
+      .staff-menu-toggle {
+        display: inline-flex;
+      }
+
+      .staff-console .sidebar {
+        position: fixed;
+        inset: 0 auto 0 0;
+        width: min(290px, 86vw);
+        height: 100dvh;
+        transform: translateX(-105%);
+        transition: transform 240ms ease;
+        box-shadow: 12px 0 35px rgba(16, 24, 40, 0.12);
+      }
+
+      .staff-console .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .staff-overlay.visible {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        background: rgba(16, 24, 40, 0.45);
+      }
+
+      .staff-console .main-area {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .staff-console .topbar {
+        min-height: 64px;
+        padding: 10px 14px;
+      }
+
+      .staff-console .content {
+        padding: 16px;
+      }
+
+      .staff-live-indicator {
+        padding: 8px;
+      }
+
+      .staff-live-label {
+        display: none;
+      }
+
+      .staff-panel {
+        padding: 16px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .staff-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .staff-console .content {
+        padding: 12px;
+      }
+
+      .staff-console .topbar {
+        gap: 8px;
+      }
+
+      .staff-console .breadcrumb {
+        font-size: 14px;
+      }
+
+      .staff-section-heading {
+        align-items: stretch;
+      }
+
+      .staff-search {
+        width: 100%;
+      }
+
+      .staff-footer {
+        padding: 16px 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <div class="app-shell hidden" id="shell">
-    <aside class="sidebar">
+  <div class="app-shell hidden staff-console" id="shell">
+
+    <aside class="sidebar" id="staffSidebar" aria-label="Staff navigation">
       <div class="brand">
         <span class="brand-mark">E</span>
-        <span>Edu<span class="brand-accent">Ahead</span></span>
+        <span>Edu<span class="brand-accent">Ahead Ai Tutor</span></span>
       </div>
-      <nav class="side-nav" id="nav"></nav>
+
+      <nav class="side-nav" id="nav" aria-label="Main navigation">
+        <!-- Navigation is populated by app.js -->
+      </nav>
+
       <div class="sidebar-bottom">
-        <button class="btn btn-ghost btn-small" onclick="Auth.logout()">Log out</button>
+        <button
+          class="btn btn-ghost btn-small"
+          id="staffLogout"
+          type="button" onclick="Auth.logout()"
+        >
+          ↪ Log out
+        </button>
       </div>
     </aside>
+
+    <div class="staff-overlay" id="staffOverlay" aria-hidden="true"></div>
+
     <main class="main-area">
       <header class="topbar">
-        <div class="breadcrumb"><strong id="who"></strong></div>
+        <div class="topbar-left">
+          <button
+            class="staff-menu-toggle"
+            id="staffMenuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="staffSidebar"
+          >☰</button>
+
+          <div class="breadcrumb">
+            <strong id="who">EduAhead Staff Console</strong>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <div
+            class="staff-live-indicator"
+            id="staffConnection"
+            data-status="waiting"
+            role="status"
+            aria-live="polite"
+          >
+            <span class="staff-live-dot"></span>
+            <span class="staff-live-label" id="staffConnectionText">
+              Waiting for data
+            </span>
+          </div>
+        </div>
       </header>
-      <div class="content" id="app"></div>
+
+      <div class="content" id="app" tabindex="-1">
+
+        <!-- These are informational placeholders, not live database totals. -->
+        <section aria-labelledby="staffWelcomeTitle">
+          <div class="staff-section-heading">
+            <div>
+              <h1 id="staffWelcomeTitle">Staff dashboard</h1>
+              <p class="staff-note">
+                Monitor learning activity and student progress.
+              </p>
+            </div>
+          </div>
+
+          <div class="staff-overview">
+            <article class="staff-panel">
+              <div class="staff-stat-label">Student records</div>
+              <div class="staff-stat-value" id="staffStudentCount">—</div>
+              <div class="staff-note">Awaiting connected student data</div>
+            </article>
+
+            <article class="staff-panel">
+              <div class="staff-stat-label">Quiz activity</div>
+              <div class="staff-stat-value" id="staffQuizCount">—</div>
+              <div class="staff-note">Awaiting saved quiz records</div>
+            </article>
+
+            <article class="staff-panel">
+              <div class="staff-stat-label">Learning activity</div>
+              <div class="staff-stat-value" id="staffLearningCount">—</div>
+              <div class="staff-note">Awaiting saved learning events</div>
+            </article>
+          </div>
+        </section>
+
+        <section class="staff-panel" aria-labelledby="staffActivityTitle">
+          <div class="staff-section-heading">
+            <div>
+              <h2 id="staffActivityTitle">Recent student activity</h2>
+              <p class="staff-note">
+                Activity appears here when the main website sends events
+                to this console.
+              </p>
+            </div>
+
+            <input
+              class="staff-search"
+              id="staffActivitySearch"
+              type="search"
+              placeholder="Search activity..."
+              aria-label="Search student activity"
+            >
+          </div>
+
+          <div
+            class="staff-activity-list"
+            id="staffActivityList"
+            aria-live="polite"
+          >
+            <div class="staff-empty" id="staffActivityEmpty">
+              No activity has been received yet. Connect your shared backend
+              or configure the main website to send student activity events.
+            </div>
+          </div>
+        </section>
+
+        <!-- Existing staff pages are rendered by app.js below or into this area. -->
+      </div>
+
+      <footer class="staff-footer">
+        © <span id="staffYear"></span> EduAhead · Learn today. Lead tomorrow.
+      </footer>
     </main>
   </div>
-  <div class="toast" id="toast"></div>
 
-  <!-- Core Scripts -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
   <script src="js/config.js"></script>
   <script src="js/backend.js"></script>
   <script src="js/app.js"></script>
+
+  <script>
+    (() => {
+      const sidebar = document.getElementById("staffSidebar");
+      const toggle = document.getElementById("staffMenuToggle");
+      const overlay = document.getElementById("staffOverlay");
+      const search = document.getElementById("staffActivitySearch");
+      const activityList = document.getElementById("staffActivityList");
+      const activityEmpty = document.getElementById("staffActivityEmpty");
+      const connection = document.getElementById("staffConnection");
+      const connectionText = document.getElementById("staffConnectionText");
+
+      document.getElementById("staffYear").textContent =
+        new Date().getFullYear();
+
+      function closeMenu() {
+        sidebar?.classList.remove("open");
+        overlay?.classList.remove("visible");
+        toggle?.setAttribute("aria-expanded", "false");
+        toggle?.setAttribute("aria-label", "Open navigation menu");
+        overlay?.setAttribute("aria-hidden", "true");
+      }
+
+      toggle?.addEventListener("click", () => {
+        const opening = !sidebar.classList.contains("open");
+
+        sidebar.classList.toggle("open", opening);
+        overlay.classList.toggle("visible", opening);
+        toggle.setAttribute("aria-expanded", String(opening));
+        toggle.setAttribute(
+          "aria-label",
+          opening ? "Close navigation menu" : "Open navigation menu"
+        );
+        overlay.setAttribute("aria-hidden", String(!opening));
+      });
+
+      overlay?.addEventListener("click", closeMenu);
+
+      sidebar?.addEventListener("click", (event) => {
+        if (event.target.closest("a, button")) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 800) closeMenu();
+      });
+
+      // Use the project's existing logout method when available.
+      document.getElementById("staffLogout")?.addEventListener("click", () => {
+        if (window.Auth && typeof window.Auth.logout === "function") {
+          window.Auth.logout();
+        } else {
+          console.error("Auth.logout() is unavailable. Check js/backend.js.");
+        }
+      });
+
+      // The main site can send activity with:
+      // window.dispatchEvent(new CustomEvent("eduahead:student-activity", {
+      //   detail: { type: "quiz_completed", student: "Student", message: "Completed a quiz" }
+      // }));
+      //
+      // For activity across different devices, send these events through
+      // your shared backend instead of relying on browser events alone.
+
+      const activityItems = [];
+      const MAX_ACTIVITY_ITEMS = 100;
+
+      function setConnection(status, message) {
+        connection.dataset.status = status;
+        connectionText.textContent = message;
+      }
+
+      function renderActivity() {
+        const query = (search?.value || "").trim().toLowerCase();
+        const filtered = activityItems.filter((item) =>
+          `${item.type} ${item.student} ${item.message}`
+            .toLowerCase()
+            .includes(query)
+        );
+
+        activityList.replaceChildren();
+
+        if (!filtered.length) {
+          const empty = document.createElement("div");
+          empty.className = "staff-empty";
+          empty.textContent = activityItems.length
+            ? "No activity matches your search."
+            : "No student activity has been received yet.";
+          activityList.appendChild(empty);
+          return;
+        }
+
+        filtered.forEach((item) => {
+          const row = document.createElement("article");
+          row.className = "staff-activity-item";
+
+          const icon = document.createElement("div");
+          icon.className = "staff-activity-icon";
+          icon.setAttribute("aria-hidden", "true");
+          icon.textContent = item.type.toLowerCase().includes("quiz")
+            ? "✓"
+            : "↗";
+
+          const copy = document.createElement("div");
+          copy.className = "staff-activity-copy";
+
+          const message = document.createElement("p");
+          message.textContent = item.message || "Student activity recorded";
+
+          const meta = document.createElement("small");
+          const date = new Date(item.timestamp);
+          meta.textContent =
+            `${item.student || "Student"} · ` +
+            (Number.isNaN(date.getTime()) ? "Recently" : date.toLocaleString());
+
+          copy.append(message, meta);
+          row.append(icon, copy);
+          activityList.appendChild(row);
+        });
+      }
+
+      window.addEventListener("eduahead:student-activity", (event) => {
+        const data = event.detail;
+
+        if (!data || typeof data !== "object") return;
+
+        activityItems.unshift({
+          type: String(data.type || "learning"),
+          student: String(data.student || "Student"),
+          message: String(data.message || "Student activity recorded"),
+          timestamp: data.timestamp || new Date().toISOString()
+        });
+
+        if (activityItems.length > MAX_ACTIVITY_ITEMS) {
+          activityItems.length = MAX_ACTIVITY_ITEMS;
+        }
+
+        setConnection("connected", "Activity received");
+        renderActivity();
+      });
+
+      search?.addEventListener("input", renderActivity);
+
+      // Keep the existing app renderer in control of authentication and pages.
+      // Avoid showing fake database totals or claiming a live connection
+      // before real backend data has been received.
+      setConnection("waiting", "Waiting for data");
+    })();
+  </script>
 </body>
+</html>

@@ -1,0 +1,1727 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #175cd3;
+  --blue-dark: #1249aa;
+  --blue-light: #edf4ff;
+  --text: #182230;
+  --muted: #667085;
+  --border: #e4e9f1;
+  --background: #f5f7fb;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px;
+  display: grid;
+  place-items: center;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.auth-container {
+  width: min(100%, 1050px);
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 25px 70px #18223012;
+}
+
+.welcome-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 38px;
+  color: white;
+  background: linear-gradient(145deg, #1249aa, #175cd3 65%, #4787f5);
+  overflow: hidden;
+}
+
+.welcome-panel::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  right: -140px;
+  bottom: 60px;
+  border: 1px solid #ffffff30;
+  border-radius: 50%;
+  box-shadow: 0 0 0 35px #ffffff0b,
+              0 0 0 70px #ffffff08;
+  pointer-events: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font: 800 24px Manrope, sans-serif;
+  letter-spacing: -0.8px;
+}
+
+.brand-logo {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: white;
+  color: var(--blue);
+  font: 800 23px Manrope, sans-serif;
+}
+
+.brand-blue {
+  color: #78aaff;
+}
+
+.welcome-panel .brand-blue {
+  color: #d5e5ff;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  margin: auto 0;
+  padding: 48px 0;
+}
+
+.eyebrow {
+  color: #d7e5ff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.welcome-content h1 {
+  margin: 20px 0 15px;
+  font: 800 clamp(30px, 4vw, 43px)/1.2 Manrope, sans-serif;
+  letter-spacing: -1.5px;
+}
+
+.welcome-content > p {
+  max-width: 360px;
+  color: #e1ebff;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.feature {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.feature > span {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: #ffffff20;
+  color: white;
+}
+
+.feature strong,
+.feature small {
+  display: block;
+}
+
+.feature strong {
+  font-size: 12px;
+  margin: 2px 0 5px;
+}
+
+.feature small {
+  color: #d6e4ff;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.copyright {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #d6e4ff;
+  font-size: 10px;
+}
+
+.form-panel {
+  padding: 45px 48px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-brand {
+  display: none;
+}
+
+.form-heading h2 {
+  margin: 0 0 8px;
+  font: 800 27px Manrope, sans-serif;
+  letter-spacing: -0.8px;
+}
+
+.form-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  margin: 25px 0 20px;
+  border-radius: 11px;
+  background: #f1f4f9;
+}
+
+.tab {
+  padding: 11px 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tab.active {
+  color: var(--blue);
+  background: white;
+  box-shadow: 0 2px 7px #1822300c;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-group > label,
+.label-row label {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  min-width: 0;
+  height: 45px;
+  padding: 0 13px;
+  outline: none;
+  color: var(--text);
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-size: 12px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #84adff;
+  box-shadow: 0 0 0 3px #175cd315;
+}
+
+.form-group input::placeholder {
+  color: #a0a9b8;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 55px;
+}
+
+.show-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: 0;
+  background: none;
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.field-hint {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.primary-button {
+  width: 100%;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--blue);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background .2s, transform .2s;
+}
+
+.primary-button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: .65;
+  cursor: wait;
+  transform: none;
+}
+
+.switch-text {
+  margin: 19px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 2px 0 15px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.terms input {
+  margin-top: 2px;
+  accent-color: var(--blue);
+}
+
+.security-note {
+  margin: 17px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 10px;
+}
+
+.security-note span {
+  margin-right: 5px;
+}
+
+.message {
+  display: none;
+  margin: 0 0 15px;
+  padding: 11px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.message.show {
+  display: block;
+}
+
+.message.error {
+  background: #fff1f0;
+  color: #b42318;
+  border: 1px solid #fecdca;
+}
+
+.message.success {
+  background: #e8f8f1;
+  color: #067647;
+  border: 1px solid #abefc6;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 18px;
+  }
+
+  .auth-container {
+    max-width: 520px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    
+  }
+
+  .welcome-panel {
+    display: none;
+  }
+
+  .form-panel {
+    padding: 30px;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 30px;
+    font: 800 21px Manrope, sans-serif;
+  
+  }
+
+  .mobile-brand .brand-logo {
+    background: var(--blue);
+    color: white;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 0;
+    background: white;
+  }
+
+  .auth-container {
+    width: 100%;
+    min-height: 100vh;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .form-panel {
+    padding: 25px 22px;
+  }
+}
+
+/* Safe motion enhancements: visual effects only; no layout resizing. */
+.brand-logo,
+.feature,
+.tab,
+.form-group input,
+.form-group select,
+.show-password,
+.text-link,
+.primary-button {
+  transition: background-color 180ms ease, color 180ms ease,
+    border-color 180ms ease, box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.feature:hover { transform: translateX(3px); }
+.brand:hover .brand-logo { transform: rotate(-4deg); }
+.tab:hover { transform: translateY(-1px); }
+.primary-button:hover { transform: translateY(-1px); }
+.primary-button:active { transform: translateY(0); }
+.form-group input:focus,
+.form-group select:focus {
+  box-shadow: 0 0 0 3px #175cd315;
+}
+
+/* Keep status messages visible when script2.js adds .show. */
+.message {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.message.show {
+  display: block;
+  animation: auth-message-in 180ms ease both;
+}
+
+@keyframes auth-message-in {
+  from { opacity: 0.75; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Additional smooth transitions and transforms — keeps original sizing */
+.auth-container {
+  animation: ea-card-enter 520ms cubic-bezier(.22, 1, .36, 1) both;
+  transition: box-shadow 240ms ease, border-color 240ms ease;
+}
+.auth-container:hover {
+  box-shadow: 0 28px 76px #18223018;
+}
+.welcome-panel {
+  animation: ea-left-enter 620ms cubic-bezier(.22, 1, .36, 1) both;
+}
+.form-panel {
+  animation: ea-right-enter 620ms cubic-bezier(.22, 1, .36, 1) both;
+}
+.welcome-content h1,
+.form-heading h2 {
+  animation: ea-text-enter 520ms cubic-bezier(.22, 1, .36, 1) 100ms both;
+}
+.feature {
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), opacity 220ms ease;
+}
+.feature:hover {
+  transform: translateX(4px);
+}
+.feature > span {
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), background-color 220ms ease;
+}
+.feature:hover > span {
+  transform: scale(1.06);
+}
+.brand-logo {
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), box-shadow 220ms ease;
+}
+.brand:hover .brand-logo {
+  transform: rotate(-5deg) scale(1.04);
+}
+.tab {
+  transition: transform 180ms ease, color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.tab:hover {
+  transform: translateY(-1px);
+}
+.tab:active {
+  transform: scale(.99);
+}
+.form-group input,
+.form-group select {
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.form-group input:focus,
+.form-group select:focus {
+  box-shadow: 0 0 0 3px #175cd315;
+}
+.show-password,
+.text-link {
+  transition: color 180ms ease, transform 180ms ease;
+}
+.show-password:hover,
+.text-link:hover {
+  transform: translateY(-1px);
+}
+.primary-button {
+  transition: background-color 200ms ease, box-shadow 200ms ease, transform 180ms ease;
+}
+.primary-button:hover {
+  box-shadow: 0 7px 16px #175cd326;
+  transform: translateY(-1px);
+}
+.primary-button:active {
+  box-shadow: none;
+  transform: scale(.995);
+}
+/* Messages keep their original display logic: .show makes them visible. */
+.message {
+  transform: translateY(0);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.message.show {
+  display: block;
+  animation: ea-message-enter 220ms ease both;
+}
+@keyframes ea-card-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes ea-left-enter {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes ea-right-enter {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes ea-text-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes ea-message-enter {
+  from { opacity: .6; transform: translateY(-3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 800px) {
+  .welcome-panel { animation: none; }
+  .form-panel { animation: ea-mobile-enter 480ms cubic-bezier(.22, 1, .36, 1) both; }
+}
+@keyframes ea-mobile-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .auth-container, .welcome-panel, .form-panel, .welcome-content h1, .form-heading h2 {
+    animation: none !important;
+  }
+}
+
+
+/* =========================================
+   EDUAHEAD AUTH PAGE — SMOOTH MOTION
+   Append this to the end of index.css
+========================================= */
+
+:root {
+  --motion-fast: 180ms;
+  --motion-normal: 280ms;
+  --motion-slow: 550ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Main layout */
+.auth-container {
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Welcome panel enters from the left */
+.welcome-panel {
+  min-width: 0;
+  position: relative;
+  animation: welcome-enter 800ms var(--motion-ease) both;
+}
+
+/* Form panel enters from the right */
+.form-panel {
+  min-width: 0;
+  position: relative;
+  animation: form-enter 800ms var(--motion-ease) 100ms both;
+}
+
+/* Brand interactions */
+.brand,
+.mobile-brand {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    opacity var(--motion-normal) ease;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.brand-logo {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-7deg) scale(1.07);
+}
+
+/* Welcome content */
+.welcome-content {
+  animation: content-enter 850ms var(--motion-ease) 180ms both;
+}
+
+.welcome-content h1 {
+  text-wrap: balance;
+  animation: heading-enter 750ms var(--motion-ease) 250ms both;
+}
+
+.welcome-content > p {
+  line-height: 1.8;
+}
+
+/* Feature cards */
+.feature {
+  position: relative;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    background-color var(--motion-normal) ease,
+    box-shadow var(--motion-normal) ease;
+}
+
+.feature:hover {
+  transform: translateX(6px);
+}
+
+.feature > span {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+}
+
+.feature:hover > span {
+  transform: scale(1.12);
+}
+
+/* Form heading */
+.form-heading {
+  animation: content-enter 650ms var(--motion-ease) 180ms both;
+}
+
+.form-heading h2 {
+  text-wrap: balance;
+  transition: color var(--motion-normal) ease;
+}
+
+.form-heading p {
+  line-height: 1.7;
+}
+
+/* Login and sign-up tabs */
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+}
+
+.tab:active {
+  transform: scale(0.98);
+}
+
+.tab.active {
+  position: relative;
+}
+
+/* Form fields */
+.form-group {
+  min-width: 0;
+  animation: field-enter 450ms var(--motion-ease) both;
+}
+
+.form-group:nth-of-type(2) {
+  animation-delay: 45ms;
+}
+
+.form-group:nth-of-type(3) {
+  animation-delay: 90ms;
+}
+
+.form-group:nth-of-type(4) {
+  animation-delay: 135ms;
+}
+
+.form-group:nth-of-type(5) {
+  animation-delay: 180ms;
+}
+
+.form-group input,
+.form-group select,
+.password-wrap input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  transition:
+    border-color var(--motion-normal) ease,
+    box-shadow var(--motion-normal) ease,
+    background-color var(--motion-normal) ease,
+    transform var(--motion-normal) var(--motion-ease);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #98baf4;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.password-wrap input:focus {
+  outline: none;
+  border-color: #175cd3;
+  box-shadow: 0 0 0 4px rgb(23 92 211 / 12%);
+  transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+  transition: opacity var(--motion-fast) ease;
+}
+
+.form-group input:focus::placeholder {
+  opacity: 0.65;
+}
+
+/* Password visibility button */
+.show-password {
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.show-password:hover {
+  transform: scale(1.04);
+}
+
+.show-password:active {
+  transform: scale(0.96);
+}
+
+/* Main action buttons */
+.primary-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease,
+    background-color var(--motion-normal) ease,
+    filter var(--motion-normal) ease;
+}
+
+.primary-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 15%,
+    rgb(255 255 255 / 18%) 50%,
+    transparent 85%
+  );
+  transform: translateX(-120%);
+  transition: transform 650ms var(--motion-ease);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgb(23 92 211 / 20%);
+  filter: brightness(1.04);
+}
+
+.primary-button:hover::before {
+  transform: translateX(120%);
+}
+
+.primary-button:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 4px 10px rgb(23 92 211 / 14%);
+}
+
+.primary-button:focus-visible,
+.tab:focus-visible,
+.text-link:focus-visible,
+.show-password:focus-visible {
+  outline: 3px solid rgb(23 92 211 / 55%);
+  outline-offset: 3px;
+}
+
+/* Text links */
+.text-link {
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.text-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Terms and security note */
+.terms {
+  transition: color var(--motion-normal) ease;
+}
+
+.terms input {
+  accent-color: #175cd3;
+  cursor: pointer;
+  transition: transform var(--motion-fast) ease;
+}
+
+.terms input:checked {
+  transform: scale(1.08);
+}
+
+.security-note {
+  animation: content-enter 700ms var(--motion-ease) 300ms both;
+}
+
+
+/* Hidden forms must remain hidden */
+.hidden {
+  display: none !important;
+}
+
+/* =========================================
+   RESPONSIVE TABLET LAYOUT
+========================================= */
+
+@media (max-width: 1000px) {
+  .auth-container {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  }
+
+  .welcome-panel,
+  .form-panel {
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .welcome-content h1 {
+    font-size: clamp(2rem, 4.3vw, 3.3rem);
+  }
+
+  .feature {
+    gap: 0.8rem;
+  }
+}
+
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 0.5rem;
+  }
+
+  .auth-container {
+    width: 100%;
+    min-height: 100svh;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: clip;
+  }
+
+  /* Use the existing mobile brand in the form panel */
+  .welcome-panel {
+    display: none;
+  }
+
+  .form-panel {
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    animation: mobile-form-enter 650ms var(--motion-ease) both;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .form-heading h2 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .form-heading p {
+    font-size: 0.95rem;
+  }
+
+  .tabs {
+    margin-block: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .primary-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .switch-text {
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 420px) {
+  .form-panel {
+    padding: 1.15rem;
+  }
+
+  .mobile-brand {
+    margin-bottom: 1.7rem;
+  }
+
+  .form-heading h2 {
+    font-size: 1.65rem;
+  }
+
+  .label-row {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .label-row label,
+  .label-row .text-link {
+    font-size: 0.88rem;
+  }
+
+  .password-wrap {
+    min-width: 0;
+  }
+
+  .password-wrap input {
+    padding-right: 4.2rem;
+  }
+
+  .show-password {
+    white-space: nowrap;
+  }
+
+  .terms {
+    align-items: flex-start;
+    gap: 0.65rem;
+    line-height: 1.6;
+  }
+}
+
+/* Short screens and landscape phones */
+@media (max-height: 600px) and (min-width: 761px) {
+  .auth-container {
+    min-height: 100vh;
+  }
+
+  .welcome-content {
+    margin-block: 1.5rem;
+  }
+
+  .form-panel {
+    align-self: start;
+  }
+}
+
+/* Entrance animations */
+@keyframes welcome-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes form-enter {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobile-form-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heading-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes field-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect visitors who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+/* =========================================
+   EDUAHEAD AUTH PAGE — SMOOTH MOTION
+   Append this to the end of index.css
+========================================= */
+
+:root {
+  --motion-fast: 180ms;
+  --motion-normal: 280ms;
+  --motion-slow: 550ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth page scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Main layout */
+.auth-container {
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Welcome panel enters from the left */
+.welcome-panel {
+  min-width: 0;
+  position: relative;
+  animation: welcome-enter 800ms var(--motion-ease) both;
+}
+
+/* Form panel enters from the right */
+.form-panel {
+  min-width: 0;
+  position: relative;
+  animation: form-enter 800ms var(--motion-ease) 100ms both;
+}
+
+/* Brand interactions */
+.brand,
+.mobile-brand {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    opacity var(--motion-normal) ease;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
+}
+
+.brand-logo {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+}
+
+.brand:hover .brand-logo {
+  transform: rotate(-7deg) scale(1.07);
+}
+
+/* Welcome content */
+.welcome-content {
+  animation: content-enter 850ms var(--motion-ease) 180ms both;
+}
+
+.welcome-content h1 {
+  text-wrap: balance;
+  animation: heading-enter 750ms var(--motion-ease) 250ms both;
+}
+
+.welcome-content > p {
+  line-height: 1.8;
+}
+
+/* Feature cards */
+.feature {
+  position: relative;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    background-color var(--motion-normal) ease,
+    box-shadow var(--motion-normal) ease;
+}
+
+.feature:hover {
+  transform: translateX(6px);
+}
+
+.feature > span {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+}
+
+.feature:hover > span {
+  transform: scale(1.12);
+}
+
+/* Form heading */
+.form-heading {
+  animation: content-enter 650ms var(--motion-ease) 180ms both;
+}
+
+.form-heading h2 {
+  text-wrap: balance;
+  transition: color var(--motion-normal) ease;
+}
+
+.form-heading p {
+  line-height: 1.7;
+}
+
+/* Login and sign-up tabs */
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.tab:hover {
+  transform: translateY(-1px);
+}
+
+.tab:active {
+  transform: scale(0.98);
+}
+
+.tab.active {
+  position: relative;
+}
+
+/* Form fields */
+.form-group {
+  min-width: 0;
+  animation: field-enter 450ms var(--motion-ease) both;
+}
+
+.form-group:nth-of-type(2) {
+  animation-delay: 45ms;
+}
+
+.form-group:nth-of-type(3) {
+  animation-delay: 90ms;
+}
+
+.form-group:nth-of-type(4) {
+  animation-delay: 135ms;
+}
+
+.form-group:nth-of-type(5) {
+  animation-delay: 180ms;
+}
+
+.form-group input,
+.form-group select,
+.password-wrap input {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  transition:
+    border-color var(--motion-normal) ease,
+    box-shadow var(--motion-normal) ease,
+    background-color var(--motion-normal) ease,
+    transform var(--motion-normal) var(--motion-ease);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #98baf4;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.password-wrap input:focus {
+  outline: none;
+  border-color: #175cd3;
+  box-shadow: 0 0 0 4px rgb(23 92 211 / 12%);
+  transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+  transition: opacity var(--motion-fast) ease;
+}
+
+.form-group input:focus::placeholder {
+  opacity: 0.65;
+}
+
+/* Password visibility button */
+.show-password {
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.show-password:hover {
+  transform: scale(1.04);
+}
+
+.show-password:active {
+  transform: scale(0.96);
+}
+
+/* Main action buttons */
+.primary-button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease,
+    background-color var(--motion-normal) ease,
+    filter var(--motion-normal) ease;
+}
+
+.primary-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 15%,
+    rgb(255 255 255 / 18%) 50%,
+    transparent 85%
+  );
+  transform: translateX(-120%);
+  transition: transform 650ms var(--motion-ease);
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgb(23 92 211 / 20%);
+  filter: brightness(1.04);
+}
+
+.primary-button:hover::before {
+  transform: translateX(120%);
+}
+
+.primary-button:active {
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 4px 10px rgb(23 92 211 / 14%);
+}
+
+.primary-button:focus-visible,
+.tab:focus-visible,
+.text-link:focus-visible,
+.show-password:focus-visible {
+  outline: 3px solid rgb(23 92 211 / 55%);
+  outline-offset: 3px;
+}
+
+/* Text links */
+.text-link {
+  cursor: pointer;
+  transition:
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.text-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Terms and security note */
+.terms {
+  transition: color var(--motion-normal) ease;
+}
+
+.terms input {
+  accent-color: #175cd3;
+  cursor: pointer;
+  transition: transform var(--motion-fast) ease;
+}
+
+.terms input:checked {
+  transform: scale(1.08);
+}
+
+.security-note {
+  animation: content-enter 700ms var(--motion-ease) 300ms both;
+}
+
+
+
+
+/* Hidden forms must remain hidden */
+.hidden {
+  display: none !important;
+}
+
+/* =========================================
+   RESPONSIVE TABLET LAYOUT
+========================================= */
+
+@media (max-width: 1000px) {
+  .auth-container {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  }
+
+  .welcome-panel,
+  .form-panel {
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .welcome-content h1 {
+    font-size: clamp(2rem, 4.3vw, 3.3rem);
+  }
+
+  .feature {
+    gap: 0.8rem;
+  }
+}
+
+/* =========================================
+   MOBILE LAYOUT
+========================================= */
+
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 0.5rem;
+  }
+
+  .auth-container {
+    width: 100%;
+    min-height: 100svh;
+    grid-template-columns: minmax(0, 1fr);
+    overflow: clip;
+  }
+
+  /* Use the existing mobile brand in the form panel */
+  .welcome-panel {
+    display: none;
+  }
+
+  .form-panel {
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+    padding: clamp(1.25rem, 5vw, 2.5rem);
+    animation: mobile-form-enter 650ms var(--motion-ease) both;
+  }
+
+  .mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .form-heading h2 {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    line-height: 1.2;
+  }
+
+  .form-heading p {
+    font-size: 0.95rem;
+  }
+
+  .tabs {
+    margin-block: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .primary-button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  .switch-text {
+    text-align: center;
+    line-height: 1.8;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 420px) {
+  .form-panel {
+    padding: 1.15rem;
+  }
+
+  .mobile-brand {
+    margin-bottom: 1.7rem;
+  }
+
+  .form-heading h2 {
+    font-size: 1.65rem;
+  }
+
+  .label-row {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .label-row label,
+  .label-row .text-link {
+    font-size: 0.88rem;
+  }
+
+  .password-wrap {
+    min-width: 0;
+  }
+
+  .password-wrap input {
+    padding-right: 4.2rem;
+  }
+
+  .show-password {
+    white-space: nowrap;
+  }
+
+  .terms {
+    align-items: flex-start;
+    gap: 0.65rem;
+    line-height: 1.6;
+  }
+}
+
+/* Short screens and landscape phones */
+@media (max-height: 600px) and (min-width: 761px) {
+  .auth-container {
+    min-height: 100vh;
+  }
+
+  .welcome-content {
+    margin-block: 1.5rem;
+  }
+
+  .form-panel {
+    align-self: start;
+  }
+}
+
+/* Entrance animations */
+@keyframes welcome-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes form-enter {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes mobile-form-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes content-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heading-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes field-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect visitors who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
