@@ -71,3 +71,899 @@ body.dark{--bg:#111827;--surface:#1d2939;--text:#f2f4f7;--muted:#aab5c5;--line:#
 }
 
 
+
+.insight-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.insight-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  padding: 20px;
+}
+
+.insight-stat > span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.insight-stat > strong {
+  font-size: clamp(23px, 2vw, 32px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.insight-stat > small,
+.insight-subject-meta,
+.insight-hint {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.insight-columns {
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.insight-topic-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 0;
+}
+
+.insight-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.insight-number.strong {
+  background: var(--green-pale, #dcfce7);
+  color: var(--green, #15803d);
+}
+
+.insight-number.failed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.insight-number.weak {
+  background: var(--orange-pale, #ffedd5);
+  color: var(--orange, #c2410c);
+}
+
+.insight-number.missing {
+  background: #eef2f6;
+  color: #64748b;
+}
+
+.insight-topic-row .topic-info,
+.insight-breakdown-row .topic-info {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+.insight-topic-row .topic-info small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.insight-study-btn {
+  border: 1px solid var(--line, #e7ebf2);
+  border-radius: 9px;
+  background: var(--surface, #fff);
+  color: var(--blue, #175cd3);
+  padding: 8px 11px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.insight-study-btn:hover {
+  background: var(--bg, #f6f8fc);
+  transform: translateY(-1px);
+}
+
+.insight-subject-card {
+  margin-bottom: 16px;
+  padding: 20px;
+}
+
+.insight-subject-meta {
+  margin: 10px 0 8px;
+}
+
+.insight-progress-track {
+  height: 7px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--line, #e7ebf2);
+}
+
+.insight-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--blue, #175cd3);
+  transition: width 400ms ease;
+}
+
+.insight-score {
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.insight-score.failed {
+  color: #dc2626;
+}
+
+.insight-score.weak {
+  color: #c2410c;
+}
+
+.insight-score.missing {
+  color: var(--muted, #667085);
+}
+
+.insight-breakdown-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.insight-unattempted {
+  margin-bottom: 28px;
+  padding: 20px;
+}
+
+.insight-hint {
+  margin: 0 0 12px;
+}
+
+@media (max-width: 1000px) {
+  .insight-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .insight-stats-grid {
+    gap: 10px;
+  }
+
+  .insight-stat {
+    padding: 14px;
+  }
+
+  .insight-subject-card,
+  .insight-unattempted {
+    padding: 14px;
+  }
+
+  .insight-topic-row {
+    gap: 8px;
+  }
+
+  .insight-study-btn {
+    margin-left: 42px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .insight-progress-fill,
+  .insight-study-btn {
+    transition: none;
+  }
+}
+
+
+/* =========================================
+   EduAhead — Smooth Motion & Responsive UI
+   Add this at the END of styles.css
+========================================= */
+
+/* 1. Global foundations */
+:root {
+  --motion-fast: 180ms;
+  --motion-normal: 280ms;
+  --motion-slow: 420ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  touch-action: manipulation;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 2. Smooth theme changes */
+body,
+.app-shell,
+.sidebar,
+.main-area,
+.topbar,
+.panel,
+.subject-card,
+.stat-card,
+.hero,
+.hero-main,
+.hero-side,
+.help-card,
+.profile-chip,
+.footer,
+.filters,
+.topic-row,
+.streak-card,
+.example-box,
+.empty-state {
+  transition:
+    background-color var(--motion-normal) ease,
+    color var(--motion-normal) ease,
+    border-color var(--motion-normal) ease,
+    box-shadow var(--motion-normal) ease;
+}
+
+/* 3. App layout */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.main-area {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding: clamp(16px, 2.5vw, 36px);
+  min-width: 0;
+}
+
+/* 4. Page entrance animation */
+.content > * {
+  animation: eduahead-enter 460ms var(--motion-ease) both;
+}
+
+.content > *:nth-child(2) {
+  animation-delay: 35ms;
+}
+
+.content > *:nth-child(3) {
+  animation-delay: 65ms;
+}
+
+.content > *:nth-child(4) {
+  animation-delay: 95ms;
+}
+
+@keyframes eduahead-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* 5. Sidebar and navigation */
+.sidebar {
+  flex: 0 0 250px;
+  transition:
+    transform var(--motion-slow) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+  will-change: transform;
+  z-index: 100;
+}
+
+.brand,
+.nav-item,
+.icon-btn,
+.menu-toggle,
+.text-button,
+.btn {
+  transition:
+    color var(--motion-fast) ease,
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-normal) var(--motion-soft),
+    transform var(--motion-normal) var(--motion-ease),
+    opacity var(--motion-fast) ease;
+}
+
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0.7);
+  transform-origin: left;
+  transition:
+    opacity var(--motion-normal) ease,
+    transform var(--motion-normal) var(--motion-ease);
+  pointer-events: none;
+}
+
+.nav-item:hover::before {
+  opacity: 0.045;
+  transform: scaleX(1);
+}
+
+.nav-item:active {
+  transform: scale(0.985);
+}
+
+.nav-item > * {
+  position: relative;
+}
+
+/* 6. Cards and panels */
+.subject-grid,
+.stats-grid,
+.two-col,
+.lesson-layout {
+  min-width: 0;
+}
+
+.subject-card,
+.stat-card,
+.panel,
+.hero-side,
+.streak-card,
+.help-card {
+  min-width: 0;
+  border-radius: 16px;
+}
+
+.subject-card {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease,
+    border-color var(--motion-normal) ease,
+    background-color var(--motion-normal) ease;
+}
+
+.subject-card:hover {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: 0 14px 34px rgb(24 34 48 / 9%);
+}
+
+.stat-card {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease,
+    background-color var(--motion-normal) ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgb(24 34 48 / 7%);
+}
+
+.panel {
+  transition:
+    box-shadow var(--motion-normal) ease,
+    border-color var(--motion-normal) ease,
+    background-color var(--motion-normal) ease;
+}
+
+.topic-row {
+  min-width: 0;
+  transition:
+    background-color var(--motion-fast) ease,
+    transform var(--motion-normal) var(--motion-ease);
+}
+
+.topic-row:hover {
+  background-color: rgb(23 92 211 / 3%);
+}
+
+.topic-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.topic-info strong,
+.topic-info small {
+  overflow-wrap: anywhere;
+}
+
+/* 7. Buttons */
+.btn,
+.icon-btn,
+.menu-toggle {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn:hover,
+.icon-btn:hover,
+.menu-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.icon-btn:active,
+.menu-toggle:active {
+  transform: scale(0.97);
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.menu-toggle:focus-visible,
+.nav-item:focus-visible,
+.text-button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgb(23 92 211 / 45%);
+  outline-offset: 3px;
+}
+
+.btn:disabled,
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 8. Hero and decorative elements */
+.hero-main {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-art {
+  animation: eduahead-float 5s ease-in-out infinite;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.round-icon,
+.subject-symbol,
+.stat-icon,
+.topic-number {
+  transition:
+    transform var(--motion-normal) var(--motion-ease),
+    box-shadow var(--motion-normal) ease;
+}
+
+.subject-card:hover .subject-symbol,
+.topic-row:hover .topic-number {
+  transform: scale(1.06);
+}
+
+@keyframes eduahead-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(3deg);
+  }
+}
+
+/* 9. Progress bars */
+.progress-track {
+  overflow: hidden;
+}
+
+.progress-fill {
+  transition: width 700ms var(--motion-ease);
+  will-change: width;
+}
+
+/* 10. Forms and filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 14px;
+}
+
+.field,
+.search-wrap {
+  min-width: 0;
+}
+
+.field select,
+.search-input,
+input,
+textarea {
+  max-width: 100%;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    background-color var(--motion-normal) ease;
+}
+
+.field select:focus,
+.search-input:focus,
+input:focus,
+textarea:focus {
+  border-color: #175cd3;
+  box-shadow: 0 0 0 3px rgb(23 92 211 / 10%);
+}
+
+/* 11. Quiz answers */
+.answer-option {
+  transition:
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+label.answer-option {
+  cursor: pointer;
+}
+
+label.answer-option:hover {
+  transform: translateX(3px);
+}
+
+.result-score {
+  animation: eduahead-score 500ms var(--motion-ease) both;
+}
+
+@keyframes eduahead-score {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 12. Toast notifications */
+.toast {
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  bottom: max(24px, env(safe-area-inset-bottom));
+  max-width: calc(100vw - 32px);
+  transition:
+    opacity var(--motion-normal) ease,
+    transform var(--motion-normal) var(--motion-ease),
+    visibility var(--motion-normal) ease;
+  transform: translate(-50%, 14px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 13. Tablet layout */
+@media (max-width: 1100px) {
+  .sidebar {
+    flex-basis: 220px;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-col,
+  .lesson-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    gap: 18px;
+  }
+}
+
+/* 14. Mobile navigation and layout */
+@media (max-width: 800px) {
+  .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(290px, 86vw);
+    max-width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(-105%);
+    box-shadow: none;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 18px 0 55px rgb(0 0 0 / 18%);
+  }
+
+  .main-area {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .topbar {
+    min-height: 64px;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb {
+    min-width: 0;
+    flex: 1 1 120px;
+    overflow-wrap: anywhere;
+  }
+
+  .top-actions {
+    gap: 8px;
+  }
+
+  .profile-chip {
+    max-width: 170px;
+  }
+
+  .profile-chip small {
+    overflow-wrap: anywhere;
+  }
+
+  .content {
+    padding: 20px 16px 28px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-main,
+  .hero-side {
+    min-width: 0;
+  }
+
+  .hero-main h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.12;
+    overflow-wrap: anywhere;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .section-head {
+    gap: 12px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .topic-row {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .topic-info {
+    flex: 1 1 150px;
+  }
+
+  .topic-row .btn {
+    max-width: 100%;
+  }
+
+  .filters {
+    align-items: stretch;
+  }
+
+  .filters .field,
+  .filters .search-wrap {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .filters select,
+  .search-input {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .footer {
+    padding: 18px 16px;
+    line-height: 1.7;
+  }
+}
+
+/* 15. Small phones */
+@media (max-width: 480px) {
+  .topbar {
+    padding: 10px 12px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+
+  .profile-chip {
+    max-width: 125px;
+  }
+
+  .profile-chip small {
+    font-size: 10px;
+  }
+
+  .content {
+    padding: 16px 12px 24px;
+  }
+
+  .page-header {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .page-header h1 {
+    font-size: clamp(1.55rem, 7vw, 2.1rem);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .stats-grid,
+  .subject-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stat-card {
+    padding: 14px;
+  }
+
+  .subject-card {
+    padding: 16px;
+  }
+
+  .topic-row {
+    align-items: flex-start;
+  }
+
+  .topic-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-head h2 {
+    font-size: 1.2rem;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .quiz-question {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .result-score {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+}
+
+/* 16. Short screens and landscape phones */
+@media (max-height: 500px) and (max-width: 800px) {
+  .sidebar {
+    padding-top: 12px;
+  }
+
+  .topbar {
+    position: relative;
+  }
+}
+
+/* 17. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  .subject-card:hover,
+  .stat-card:hover,
+  .btn:hover,
+  .icon-btn:hover,
+  .menu-toggle:hover {
+    transform: none;
+  }
+}

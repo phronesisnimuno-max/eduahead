@@ -1,0 +1,89 @@
+{
+ "meta": {
+  "app": "EduAhead",
+  "schema": 2,
+  "rev": 11,
+  "curriculumStandard": "Akwa Ibom State Scheme of Work: Mathematics (JSS 1 to SSS 3) and English Language (JSS 1 to SSS 3)",
+  "sources": [
+   "https://schoolings.org/akwa-ibom-state-scheme-of-work-for-junior-secondary-schools/",
+   "https://schoolings.org/akwa-ibom-state-scheme-of-work-for-senior-secondary-schools-ss1-ss3-for-all-subjects/"
+  ],
+  "notes": [
+   "Third-party site reproducing the state scheme, not the Ministry's own file. Verify with your school.",
+   "M. and F. of whole numbers are read as Multiples and Factors.",
+   "SSS 1 to SSS 3 are stored as SSS 1 to SSS 3.",
+   "Topics with source 'NERDC-aligned outline' were not found in the Akwa Ibom source: Maths JSS 3 and SSS 3 third term, English JSS 3 and SSS 1 to SSS 3. English JSS 1 second term is only partly published."
+  ],
+  "levels": [
+   "JSS 1",
+   "JSS 2",
+   "JSS 3",
+   "SSS 1",
+   "SSS 2",
+   "SSS 3"
+  ],
+  "terms": [
+   "First Term",
+   "Second Term",
+   "Third Term"
+  ]
+ },
+ "users": [
+  {
+   "id": "u1",
+   "name": "Dr. Adebayo",
+   "role": "admin",
+   "email": "admin@school.ng",
+   "password": "admin123",
+   "status": "active"
+  },
+  {
+   "id": "u2",
+   "name": "Mr. Bello",
+   "role": "teacher",
+   "email": "teacher@school.ng",
+   "password": "teach123",
+   "status": "active",
+   "subjects": [
+    "math",
+    "english",
+    "science",
+    "digital"
+   ],
+   "classes": [
+    "JSS 1",
+    "JSS 2"
+   ]
+  },
+  {
+   "id": "u3",
+   "name": "Tola Student",
+   "role": "student",
+   "email": "student@school.ng",
+   "password": "learn123",
+   "status": "active",
+   "class": "JSS 1"
+  },
+  {
+   "id": "u4",
+   "name": "Mrs. Okoro",
+   "role": "parent",
+   "email": "parent@school.ng",
+   "password": "parent123",
+   "status": "active",
+   "children": [
+    "u3"
+   ]
+  }
+ ],
+ "progress": [],
+ "attempts": [],
+ "reports": [],
+ "audit": [],
+ "subjectFiles": [
+  "data/subjects/mathematics.json",
+  "data/subjects/english-language.json",
+  "data/subjects/intermediate-science.json",
+  "data/subjects/digital-technologies.json"
+ ]
+}

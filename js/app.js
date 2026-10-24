@@ -23,21 +23,307 @@ function go(v, a) {
   if (appEl) appEl.innerHTML = safe2(() => VIEWS[v](a));
 }
 const safe2 = f => { try { return f(); } catch (e) { return `<div class="callout">⚠ ${esc(e.message)}</div>`; } };
+function getTeacherAssignments() {
+  try {
+    const all = JSON.parse(
+      localStorage.getItem("eduahead-teacher-assignments-v1") || "[]"
+    );
 
-const VIEWS = {
-  dash() {
-    const totalStudents = students(me).length;
-    const totalTopics = DB.d.subjects.reduce((acc, s) => acc + s.topics.length, 0);
-    const totalReports = Reports.list(me).length;
-    return `<h1>Welcome back, ${esc(me.name)}</h1>
-      <p class="muted" style="margin-bottom:20px">Role: <strong>${esc(me.role.toUpperCase())}</strong> · School Management Portal</p>
-      <div class="stats-grid">
-        <div class="stat-card"><div class="stat-icon">👥</div><div><div class="stat-label">Managed Students</div><div class="stat-value">${totalStudents}</div></div></div>
-        <div class="stat-card"><div class="stat-icon green">📚</div><div><div class="stat-label">Curriculum Topics</div><div class="stat-value">${totalTopics}</div></div></div>
-        <div class="stat-card"><div class="stat-icon orange">📊</div><div><div class="stat-label">Generated Reports</div><div class="stat-value">${totalReports}</div></div></div>
+    return all.filter(item => item.teacherId === me.id);
+  } catch {
+    return [];
+  }
+}
+
+function saveTeacherAssignments(items) {
+  const all = JSON.parse(
+    localStorage.getItem("eduahead-teacher-assignments-v1") || "[]"
+  );
+
+  const others = all.filter(item => item.teacherId !== me.id);
+
+  localStorage.setItem(
+    "eduahead-teacher-assignments-v1",
+    JSON.stringify([...others, ...items])
+  );
+}
+
+const createAssignment = safe(async event => {
+  event.preventDefault();
+
+  const title = $("#assignmentTitle").value.trim();
+  const subject = $("#assignmentSubject").value;
+  const level = $("#assignmentClass").value;
+  const due = $("#assignmentDue").value;
+  const instructions = $("#assignmentInstructions").value.trim();
+
+  if (!title || !due) {
+    throw new Error("Enter an assignment title and due date.");
+  }
+
+  if (due < new Date().toISOString().slice(0, 10)) {
+    throw new Error("Choose today or a future due date.");
+  }
+
+  const items = getTeacherAssignments();
+
+  items.unshift({
+    id: "assignment_" + crypto.randomUUID(),
+    teacherId: me.id,
+    title,
+    subject,
+    level,
+    due,
+    instructions,
+    status: "Pending",
+    createdAt: new Date().toISOString()
+  });
+
+  saveTeacherAssignments(items);
+  toast("Assignment created.");
+  go("assignments");
+});
+
+const toggleAssignment = safe(id => {
+  const items = getTeacherAssignments();
+  const item = items.find(assignment => assignment.id === id);
+
+  if (!item) throw new Error("Assignment not found.");
+
+  item.status = item.status === "Completed" ? "Pending" : "Completed";
+
+  saveTeacherAssignments(items);
+  go("assignments");
+});
+const VIEWS = {  assignments() {
+    return `
+      <h1>Assignments</h1>
+
+      <div class="panel">
+        <h2>Create an Assignment</h2>
+
+        <form onsubmit="createAssignment(event)">
+          <input
+            id="assignmentTitle"
+            class="search-input"
+            placeholder="Assignment title"
+            required
+          >
+
+          <input
+            id="assignmentDue"
+            class="search-input"
+            type="date"
+            required
+          >
+
+          <button class="btn" type="submit">
+            Create Assignment
+          </button>
+        </form>
       </div>
-      <div class="panel"><h2>Quick Actions</h2><p class="muted" style="font-size:12px;margin-top:8px">Use the sidebar navigation to manage curriculum contents, approve user sign-ups, or generate termly academic performance reports.</p></div>`;
-  },
+    `;
+  }
+
+  
+  ,planner() {
+  const topics = DB.d.subjects.flatMap(subject =>
+    subject.topics.map(topic => ({
+      ...topic,
+      subjectName: subject.name
+    }))
+  );
+
+  const lessonRows = topics.map(topic => `
+    <div class="topic-row">
+      <div class="topic-number">📖</div>
+      <div class="topic-info">
+        <strong>${esc(topic.title)}</strong>
+        <small>
+          ${esc(topic.subjectName)} · ${esc(topic.level)} ·
+          ${esc(topic.term)} · ${Number(topic.minutes || 15)} mins
+        </small>
+      </div>
+      ${b("View Curriculum", "go('curr')")}
+    </div>
+  `).join("");
+
+  return `
+    <h1>Lesson Planner</h1>
+    <p class="muted" style="margin-bottom:20px">
+      Browse available lesson topics and organise your teaching sequence.
+    </p>
+
+    <div class="panel">
+      <h2>Curriculum Planning</h2>
+      <p class="muted" style="margin:8px 0 14px">
+        Use the subject, class, term, and lesson duration to prepare your
+        teaching schedule.
+      </p>
+
+      <div class="topic-list">
+        ${lessonRows || `
+          <p class="muted">
+            No curriculum topics are available yet.
+          </p>
+        `}
+      </div>
+    </div>
+  `;
+},
+insights() {
+  const myStudents = students(me);
+
+  const rows = myStudents.map(student => {
+    const result = Results.compute(student.id);
+    const score = result.overall;
+    const valid = score !== null &&
+      score !== undefined &&
+      Number.isFinite(Number(score));
+
+    const label = !valid
+      ? "No result"
+      : Number(score) < 50
+        ? "Needs review"
+        : Number(score) < 70
+          ? "Developing"
+          : "Progressing well";
+
+    return row(
+      student.name?.[0] || "S",
+      student.name,
+      `Class: ${student.class || "Not specified"} · Overall: ${
+        valid ? `${score}%` : "Not available"
+      }`,
+      label
+    );
+  }).join("");
+
+  return `
+    <h1>Performance Insights</h1>
+    <p class="muted" style="margin-bottom:20px">
+      Review available student results to identify useful revision priorities.
+    </p>
+
+    <div class="panel">
+      <h2>Student Progress Review</h2>
+      <div class="topic-list" style="margin-top:12px">
+        ${rows || `
+          <p class="muted">
+            No student records are available for this account.
+          </p>
+        `}
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:16px">
+      📌 These labels are simple indicators based on overall scores,
+      not a complete assessment of a student's ability. Check subject-level
+      results and the school's grading policy before making decisions.
+    </div>
+  `;
+},
+
+  dash() {
+  const myStudents = students(me);
+  const totalTopics = DB.d.subjects.reduce(
+    (total, subject) => total + subject.topics.length, 0
+  );
+  const totalReports = Reports.list(me).length;
+
+  const averages = myStudents
+    .map(student => Results.compute(student.id).overall)
+    .filter(score => Number.isFinite(Number(score)))
+    .map(Number);
+
+  const classAverage = averages.length
+    ? Math.round(averages.reduce((a, score) => a + score, 0) / averages.length)
+    : null;
+
+  const needsSupport = myStudents.filter(student => {
+    const score = Results.compute(student.id).overall;
+    return score !== null &&
+      score !== undefined &&
+      Number.isFinite(Number(score)) &&
+      Number(score) < 50;
+  }).length;
+
+  return `
+    <h1>Welcome back, ${esc(me.name)} 👋</h1>
+    <p class="muted" style="margin-bottom:20px">
+      Your teaching workspace · ${esc(me.role.toUpperCase())}
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div>
+          <div class="stat-label">My Students</div>
+          <div class="stat-value">${myStudents.length}</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon green">📚</div>
+        <div>
+          <div class="stat-label">Curriculum Topics</div>
+          <div class="stat-value">${totalTopics}</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon orange">📈</div>
+        <div>
+          <div class="stat-label">Class Average</div>
+          <div class="stat-value">
+            ${classAverage === null ? "—" : `${classAverage}%`}
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📝</div>
+        <div>
+          <div class="stat-label">Generated Reports</div>
+          <div class="stat-value">${totalReports}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <h2>Teaching Shortcuts</h2>
+      <p class="muted" style="margin:8px 0 16px">
+        Jump directly to the tools you need.
+      </p>
+      <div class="filters">
+        ${b("👥 View My Students", "go('students')", "btn")}
+        ${b("📝 Create Assignment", "go('assignments')", "btn")}
+        ${b("📅 Plan a Lesson", "go('planner')", "btn")}
+        ${b("📊 View Insights", "go('insights')", "btn")}
+        ${b("📄 View Reports", "go('reports')", "btn")}
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:20px">
+      <h2>Student Support Overview</h2>
+      <p class="muted" style="margin-top:8px">
+        ${needsSupport} student(s) have an available overall result below 50%.
+        Review their subject results before deciding what support they need.
+      </p>
+      ${b("Review Student Performance", "go('insights')", "btn btn-small")}
+    </div>
+
+    <div class="callout" style="margin-top:16px">
+      💡 Use the performance insights to guide revision and individual support.
+      Confirm grading thresholds with your school's assessment policy.
+    </div>
+    
+  
+  
+    `;
+ },
+ 
+    
   curr() {
     const addForm = can(me, "curriculum.write") ? `
       <div class="panel" style="margin-bottom:20px">
@@ -51,6 +337,7 @@ const VIEWS = {
         <textarea id="tx" class="search-input" style="height:75px;width:100%;padding:10px;margin-top:10px" placeholder="Comprehensive lesson notes and explanation..."></textarea>
         <div style="margin-top:12px">${b("Publish Topic to DB", "addTopic()", "btn")}</div>
       </div>` : "";
+      
     
     const topicsList = DB.d.subjects.flatMap(s => s.topics.map(t => ({ ...t, subjectName: s.name, subjectIcon: s.icon })))
       .map(t => row(t.subjectIcon || '📖', t.title, `${t.subjectName} · ${t.level} · ${t.term}`, `${t.minutes || 15} mins`)).join("");
@@ -65,6 +352,7 @@ const VIEWS = {
     }).join("");
     return `<div class="filters" style="margin-bottom:16px">${sel}</div>` + panel("Student Directory & Performance", studentRows);
   },
+  
   reports() {
     const list = Reports.list(me);
     const html = list.length ? list.map(r => `

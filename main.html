@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#175cd3" />
+  <link rel="shortcut icon" href="logo.png" type="image/png">
   <meta name="description" content="EduAhead helps students explore topics, learn ahead, practise, and track their study progress." />
   <title>EduAhead — Learn Today. Lead Tomorrow.</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="/images/logo.png">
+  
 
   <!-- Backend & Access Dependencies -->
   <script src="js/config.js"></script>
@@ -41,9 +42,9 @@
       <header class="topbar">
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
         <div class="breadcrumb"><span>Learning space</span><span class="crumb-slash">/</span><strong id="pageCrumb">Dashboard</strong></div>
-        <div class="top-actions">
+        <div class="top-actions"><button class="btn btn-ghost btn-small" onclick="Auth.logout()">Log out</button>
+
           <button class="icon-btn" id="themeButton" title="Toggle theme" aria-label="Toggle theme">◐</button>
-          <button type="button" class="btn btn-ghost btn-small" id="logoutButton">Log out</button>
           <div class="profile-chip">
             <div class="avatar">S</div>
             <div><strong id="profileName">Student</strong><small id="profileMeta">My learning space</small></div>
@@ -51,7 +52,7 @@
         </div>
       </header>
       <div class="content" id="appContent" tabindex="-1"></div>
-      <footer class="footer">© <span id="year"></span> EduAhead · Learn today. Lead tomorrow. <span>Demo prototype · curriculum examples are illustrative</span></footer>
+      <footer class="footer">© <span id="year"></span> EduAhead · Learn today. Lead tomorrow. <span>Always confirm topics with your school's scheme of work</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -128,7 +129,7 @@
     }
 
     function filtersHtml() {
-      return `<div class="filters"><div class="field"><label for="classFilter">CLASS</label><select id="classFilter"><option>JSS 1</option><option>JSS 2</option><option>JSS 3</option><option>SS 1</option><option>SS 2</option><option>SS 3</option></select></div><div class="field"><label for="termFilter">TERM</label><select id="termFilter"><option>First Term</option><option>Second Term</option><option>Third Term</option></select></div><div class="field"><label for="subjectFilter">SUBJECT</label><select id="subjectFilter"><option value="all">All subjects</option>${curriculum.map(s => `<option value="${s.id}">${s.name}</option>`).join("")}</select></div><div class="search-wrap"><span class="search-glass">⌕</span><input class="search-input" id="topicSearch" placeholder="Search topics or subjects..." /></div></div>`;
+      return `<div class="filters"><div class="field"><label for="classFilter">CLASS</label><select id="classFilter"><option>JSS 1</option><option>JSS 2</option><option>JSS 3</option><option>SSS 1</option><option>SSS 2</option><option>SSS 3</option></select></div><div class="field"><label for="termFilter">TERM</label><select id="termFilter"><option>First Term</option><option>Second Term</option><option>Third Term</option></select></div><div class="field"><label for="subjectFilter">SUBJECT</label><select id="subjectFilter"><option value="all">All subjects</option>${curriculum.map(s => `<option value="${s.id}">${s.name}</option>`).join("")}</select></div><div class="search-wrap"><span class="search-glass">⌕</span><input class="search-input" id="topicSearch" placeholder="Search topics or subjects..." /></div></div>`;
     }
 
     function renderCurriculum() {
@@ -137,23 +138,23 @@
 
     function renderLearn() {
       const ahead = allTopics().filter(t => !isComplete(t));
-      return `${header("Get a head start", "Preview upcoming topics, learn at your own pace, and be ready before your next class.")}<div class="two-col"><div class="panel"><div class="panel-heading"><h2>Your learn-ahead path</h2><span class="status ahead">${ahead.length} to explore</span></div><div class="topic-list">${ahead.map((t, i) => `<div class="topic-row"><div class="topic-number">${i + 1}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName} · ${t.term} ·${t.minutes} min</small></div><span class="status ${isStudied(t) ? "ahead" : "upcoming"}">${isStudied(t) ? "Studied" : "Learn ahead"}</span>${btn("Study →", `topic:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn btn-small")}</div>`).join("")}</div></div><div><div class="streak-card"><span class="flame">🔥</span><strong>${progress.studied.length} topics explored</strong><p>Every topic you explore gives you a little more confidence before class.</p></div><div class="panel" style="margin-top:17px"><h2>Study tip</h2><p class="muted" style="line-height:1.8;font-size:12px;margin-top:10px">Try 15–20 minutes a day. Read the lesson, work through the example, then take the quiz.</p><button class="btn btn-light" data-action="go-quiz">Practise a quiz →</button></div></div></div>`;
+      return `${header("Get a head start", "Preview upcoming topics, learn at your own pace, and be ready before your next class.")}<div class="two-col"><div class="panel"><div class="panel-heading"><h2>Your learn-ahead path</h2><span class="status ahead">${ahead.length} to explore</span></div><div class="topic-list">${ahead.map((t, i) => `<div class="topic-row"><div class="topic-number">${i + 1}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName} · ${t.term} ·${t.minutes} min</small></div><span class="status ${isStudied(t) ? "ahead" : "upcoming"}">${isStudied(t) ? "Studied" : "Learn ahead"}</span>${btn("Study →", `topic:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn btn-small")}</div>`).join("")}</div></div><div><div class="streak-card"><span class="flame">🔥</span><strong>${progress.studied.length} topics explored</strong><p>Every topic you explore gives you a little more confidence before class.</p></div><div class="panel" style="margin-top:17px"><h2>Study tip</h2><p class="muted" style="line-height:1.8;font-size:12px;margin-top:10px">Try 15–20 minutes a day. Read the lesson, work through the example, then take the quiz.</p><button class="btn btn-light" data-action="go-quiz">Practise a quiz →</button></div></div></div>`;
     }
 
     function renderQuizHub() {
       const topics = allTopics().filter(t => t.questions && t.questions.length);
-      return `${header("Practice quizzes", "Test your understanding and learn from the explanations.")}<div class="subject-grid">${topics.map(t => `<article class="subject-card"><div class="subject-top"><div class="subject-symbol ${t.subjectColor || ''}">✓</div><span class="status">${t.questions.length} questions</span></div><h3>${t.title}</h3><p>${t.subjectName} · ${t.level}<br>${t.summary || ''}</p><div class="subject-meta"><span>${progress.scores[topicKey(t)] !== undefined ? `Best score: ${progress.scores[topicKey(t)]}%` : "Ready when you are"}</span>${btn("Start quiz →", `quiz:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn btn-small")}</div></article>`).join("")}</div>`;
+      return `${header("Practice quizzes", "Test your understanding and learn from the explanations.")}<div class="subject-grid">${topics.map(t => `<article class="subject-card"><div class="subject-top"><div class="subject-symbol ${t.subjectColor || ''}">✓</div><span class="status">${t.questions.length} questions</span></div><h3>${t.title}</h3><p>${t.subjectName} · ${t.level}<br>${t.summary || ''}</p><div class="subject-meta"><span>${progress.scores[topicKey(t)] !== undefined ? `Best score: ${progress.scores[topicKey(t)]}%` : "Ready when you are"}</span>${btn("Start quiz →", `quiz:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn btn-small")}</div></article>`).join("")}</div>`;
     }
 
     function renderProgress() {
       const topics = allTopics(), done = topics.filter(isComplete), studied = topics.filter(isStudied), scores = Object.values(progress.scores), avg = scores.length ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-      return `${header("My progress", "A simple view of the topics you have explored and quizzes you have attempted.")}<div class="stats-grid"><div class="stat-card"><div class="stat-icon green">✓</div><div><div class="stat-label">Completed topics</div><div class="stat-value">${done.length}/${topics.length}</div></div></div><div class="stat-card"><div class="stat-icon">◷</div><div><div class="stat-label">Topics studied</div><div class="stat-value">${studied.length}</div></div></div><div class="stat-card"><div class="stat-icon orange">★</div><div><div class="stat-label">Average quiz score</div><div class="stat-value">${avg}%</div></div></div></div><div class="section-head"><h2>Topics you have explored</h2></div><div class="panel">${studied.length ? `<div class="topic-list">${studied.map(t => `<div class="topic-row"><div class="topic-number">${t.subjectIcon || '•'}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName}</small></div><span class="status ${isComplete(t) ? "completed" : "ahead"}">${isComplete(t) ? "Completed" : "Studied"}</span>${btn("Review →", `topic:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn btn-small btn-light")}</div>`).join("")}</div>` : `<div class="empty-state"><div class="empty-icon">📘</div><h3>Your learning journey starts here</h3><p>Open a topic and mark it as studied.</p>${btn("Explore curriculum →", "go-curriculum")}</div>`}</div><div style="margin-top:18px">${btn("Reset demo progress", "reset-progress", "btn btn-ghost")}</div>`;
+      return `${header("My progress", "A simple view of the topics you have explored and quizzes you have attempted.")}<div class="stats-grid"><div class="stat-card"><div class="stat-icon green">✓</div><div><div class="stat-label">Completed topics</div><div class="stat-value">${done.length}/${topics.length}</div></div></div><div class="stat-card"><div class="stat-icon">◷</div><div><div class="stat-label">Topics studied</div><div class="stat-value">${studied.length}</div></div></div><div class="stat-card"><div class="stat-icon orange">★</div><div><div class="stat-label">Average quiz score</div><div class="stat-value">${avg}%</div></div></div></div><div class="section-head"><h2>Topics you have explored</h2></div><div class="panel">${studied.length ? `<div class="topic-list">${studied.map(t => `<div class="topic-row"><div class="topic-number">${t.subjectIcon || '•'}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName}</small></div><span class="status ${isComplete(t) ? "completed" : "ahead"}">${isComplete(t) ? "Completed" : "Studied"}</span>${btn("Review →", `topic:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn btn-small btn-light")}</div>`).join("")}</div>` : `<div class="empty-state"><div class="empty-icon">📘</div><h3>Your learning journey starts here</h3><p>Open a topic and mark it as studied.</p>${btn("Explore curriculum →", "go-curriculum")}</div>`}</div><div style="margin-top:18px">${btn("Reset my progress", "reset-progress", "btn btn-ghost")}</div>`;
     }
 
     function renderTopic() {
       const t = state.currentTopic; if (!t) return renderCurriculum();
       const done = isComplete(t);
-      return `${header(t.title, `${t.subjectName} · ${t.level} ·${t.term}`, btn("← Back to topics", "back-topics", "btn btn-ghost"))}<div class="lesson-layout"><article class="panel"><div class="eyebrow">TOPIC OVERVIEW</div><h2>What you'll learn</h2><p class="lesson-body">${t.summary || ''}</p><h3>Learning objectives</h3><ul class="lesson-body">${(t.objectives || []).map(o => `<li>${o}</li>`).join("")}</ul><div class="lesson-body"><h3>Let's understand it</h3><p>${t.lesson || ''}</p><div class="example-box"><strong>Example</strong><br>${t.example || ''}</div></div><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">${btn(done ? "✓ Completed" : "✓ Mark as completed", `complete:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn")}${btn("Take practice quiz →", `quiz:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn btn-light")}</div></article><aside><div class="panel"><div class="round-icon" style="margin-bottom:15px">◷</div><h2>Your study session</h2><p class="muted" style="font-size:11px;line-height:1.7">Estimated reading time: <strong>${t.minutes || 15} minutes</strong></p></div></aside></div>`;
+      return `${header(t.title, `${t.subjectName} · ${t.level} ·${t.term}`, btn("← Back to topics", "back-topics", "btn btn-ghost"))}<div class="lesson-layout"><article class="panel"><div class="eyebrow">TOPIC OVERVIEW</div><h2>What you'll learn</h2><p class="lesson-body">${t.summary || ''}</p><h3>Learning objectives</h3><ul class="lesson-body">${(t.objectives || []).map(o => `<li>${o}</li>`).join("")}</ul><div class="lesson-body"><h3>Let's understand it</h3><p>${t.lesson || ''}</p><div class="example-box"><strong>Example</strong><br>${t.example || ''}</div></div><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px">${btn(done ? "✓ Completed" : "✓ Mark as completed", `complete:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn")}${btn("Take practice quiz →", `quiz:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn btn-light")}</div></article><aside><div class="panel"><div class="round-icon" style="margin-bottom:15px">◷</div><h2>Your study session</h2><p class="muted" style="font-size:11px;line-height:1.7">Estimated reading time: <strong>${t.minutes || 15} minutes</strong></p></div></aside></div>`;
     }
 
     function renderQuizRun() {
@@ -200,12 +201,12 @@
       let list = allTopics().filter(t => (state.subject === "all" || t.subjectId === state.subject) && t.level === state.className && t.term === state.term && (`${t.title} ${t.subjectName} ${t.summary || ''}`).toLowerCase().includes(state.query.toLowerCase()));
       const countEl = document.getElementById("resultsCount");
       if(countEl) countEl.textContent = `${list.length} topic${list.length === 1 ? "" : "s"}`;
-      el.innerHTML = list.length ? list.map((t, i) => `<div class="topic-row"><div class="topic-number">${String(i + 1).padStart(2, "0")}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName} · ${t.minutes || 15} min · ${t.summary || ''}</small></div><span class="status ${isComplete(t) ? "completed" : isStudied(t) ? "ahead" : "upcoming"}">${isComplete(t) ? "Completed" : isStudied(t) ? "Studied" : "Upcoming"}</span>${btn("Open →", `topic:${t.subjectId}:${encodeURIComponent(t.title)}`, "btn btn-small")}</div>`).join("") : `<div class="panel empty-state"><div class="empty-icon">🔎</div><h3>No topics found</h3><p>Try another filter or search phrase.</p></div>`;
+      el.innerHTML = list.length ? list.map((t, i) => `<div class="topic-row"><div class="topic-number">${String(i + 1).padStart(2, "0")}</div><div class="topic-info"><strong>${t.title}</strong><small>${t.subjectName} · ${t.minutes || 15} min · ${t.summary || ''}</small></div><span class="status ${isComplete(t) ? "completed" : isStudied(t) ? "ahead" : "upcoming"}">${isComplete(t) ? "Completed" : isStudied(t) ? "Studied" : "Upcoming"}</span>${btn("Open →", `topic:${t.subjectId}:${encodeURIComponent(t.id)}`, "btn btn-small")}</div>`).join("") : `<div class="panel empty-state"><div class="empty-icon">🔎</div><h3>No topics found</h3><p>Try another filter or search phrase.</p></div>`;
     }
 
     function openTopic(subjectId, title) {
       const s = curriculum.find(x => x.id === subjectId);
-      const t = s && s.topics.find(x => x.title === title);
+      const t = s && s.topics.find(x => x.id === title);
       if (!t) { showToast("Topic not found."); return; }
       state.currentTopic = enrich(t, s);
       markStudied(state.currentTopic);
@@ -217,7 +218,7 @@
 
     function startQuiz(subjectId, title) {
       const s = curriculum.find(x => x.id === subjectId);
-      const t = s && s.topics.find(x => x.title === title);
+      const t = s && s.topics.find(x => x.id === title);
       if (!t || !t.questions) { showToast("No quiz available."); return; }
       state.quizTopic = enrich(t, s); state.quizAnswers = {}; state.quizSubmitted = false;
       state.view = "quiz-run";
@@ -237,10 +238,10 @@
       else if (a === "go-curriculum") setView("curriculum");
       else if (a === "go-quiz") setView("quiz");
       else if (a === "subject") { state.subject = el.dataset.subject; setView("curriculum"); }
-      else if (a === "open-topic") { const t = allTopics().find(x => !isComplete(x)) || allTopics()[0]; if(t) openTopic(t.subjectId, t.title); }
+      else if (a === "open-topic") { const t = allTopics().find(x => !isComplete(x)) || allTopics()[0]; if(t) openTopic(t.subjectId, t.id); }
       else if (a.startsWith("topic:")) { const [, sid, title] = a.split(":"); openTopic(sid, decodeURIComponent(title)); }
       else if (a.startsWith("quiz:")) { const [, sid, title] = a.split(":"); startQuiz(sid, decodeURIComponent(title)); }
-      else if (a.startsWith("complete:")) { const [, sid, title] = a.split(":"); const t = allTopics().find(x => x.subjectId === sid && x.title === decodeURIComponent(title)); if (t) { completeTopic(t); showToast("Marked completed!"); render(); } }
+      else if (a.startsWith("complete:")) { const [, sid, title] = a.split(":"); const t = allTopics().find(x => x.subjectId === sid && x.id === decodeURIComponent(title)); if (t) { completeTopic(t); showToast("Marked completed!"); render(); } }
       else if (a === "back-topics") setView("curriculum");
       else if (a === "retry-quiz") { state.quizAnswers = {}; state.quizSubmitted = false; render(); }
       else if (a === "reset-progress") { if (confirm("Reset progress?")) { progress.completed = []; progress.scores = {}; progress.studied = []; saveProgress(); showToast("Reset done."); render(); } }
@@ -256,9 +257,6 @@
       localStorage.setItem("eduahead-theme", document.body.classList.contains("dark") ? "dark" : "light");
     });
     if (localStorage.getItem("eduahead-theme") === "dark") document.body.classList.add("dark");
-
-    const logoutButton = document.getElementById("logoutButton");
-    if (logoutButton) logoutButton.addEventListener("click", () => Auth.logout());
     
     const yearEl = document.getElementById("year");
     if(yearEl) yearEl.textContent = new Date().getFullYear();
@@ -280,12 +278,28 @@
         // Fetch Curriculum dynamically from the database based on student class
         window.curriculum = Curriculum.forStudent(me);
         state.className = me.class || "JSS 1";
+        state.className = me.class || "JSS 2";
+        state.className = me.class || "JSS 3";
+        state.className = me.class || "SSS 1";
+        state.className = me.class || "SSS 2";
+        state.className = me.class || "SSS 3";
 
         // Initial render
         render();
       } catch (err) {
         console.error("Initialization error:", err);
       }
+      
+      window.dispatchEvent(
+  new CustomEvent("eduahead:student-activity", {
+    detail: {
+      type: "quiz_completed",
+      student: Auth.current()?.name || "Student",
+      message: "Completed a quiz",
+      timestamp: new Date().toISOString()
+    }
+  })
+);
     })();
   </script>
 </body>
