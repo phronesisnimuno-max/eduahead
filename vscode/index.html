@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#082d5c">
+  <meta name="description" content="Search flight options and plan your next journey with this Ibom Air booking website demo.">
+  <title>Ibom Air | Flight Booking</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">i</span>
+      <span>ibom<span class="orange">air</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="#home">Home</a>
+      <a href="#booking">Book a flight</a>
+      <a href="#manage">Manage booking</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a href="#booking" class="nav-button">Book Now ↗</a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR JOURNEY, OUR PRIORITY</p>
+        <h1>Fly with confidence.<br>
+          <span>Travel with ease.</span>
+        </h1>
+        <p>
+          Plan your next journey with our simple flight-search
+          experience. Choose your destination and travel dates.
+        </p>
+        <a href="#booking" class="primary-button">Find a flight →</a>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">✈</div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="booking-card">
+        <p class="eyebrow">PLAN YOUR TRIP</p>
+        <h2>Where would you like to go?</h2>
+
+        <div class="trip-types">
+          <label>
+            <input type="radio" name="tripType" value="return" checked>
+            Return trip
+          </label>
+          <label>
+            <input type="radio" name="tripType" value="oneway">
+            One way
+          </label>
+        </div>
+
+        <form id="flightForm">
+          <div class="form-grid">
+            <label>
+              From
+              <select id="origin" required>
+                <option value="Lagos (LOS)">Lagos (LOS)</option>
+                <option value="Uyo (QUO)">Uyo (QUO)</option>
+                <option value="Abuja (ABV)">Abuja (ABV)</option>
+                <option value="Calabar (CBQ)">Calabar (CBQ)</option>
+                <option value="Enugu (ENU)">Enugu (ENU)</option>
+                <option value="Port Harcourt (PHC)">Port Harcourt (PHC)</option>
+              </select>
+            </label>
+
+            <button type="button" id="swapButton"
+              class="swap-button" aria-label="Swap airports">⇄</button>
+
+            <label>
+              To
+              <select id="destination" required>
+                <option value="Uyo (QUO)">Uyo (QUO)</option>
+                <option value="Lagos (LOS)">Lagos (LOS)</option>
+                <option value="Abuja (ABV)">Abuja (ABV)</option>
+                <option value="Calabar (CBQ)">Calabar (CBQ)</option>
+                <option value="Enugu (ENU)">Enugu (ENU)</option>
+                <option value="Port Harcourt (PHC)">Port Harcourt (PHC)</option>
+              </select>
+            </label>
+
+            <label>
+              Departure date
+              <input type="date" id="departureDate" required>
+            </label>
+
+            <label id="returnDateField">
+              Return date
+              <input type="date" id="returnDate" required>
+            </label>
+
+            <label>
+              Passengers
+              <select id="passengers">
+                <option value="1">1 adult</option>
+                <option value="2">2 adults</option>
+                <option value="3">3 adults</option>
+                <option value="4">4 adults</option>
+                <option value="5">5 adults</option>
+                <option value="6">6 adults</option>
+              </select>
+            </label>
+
+            <label>
+              Cabin class
+              <select id="cabin">
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+              </select>
+            </label>
+          </div>
+
+          <button type="submit" class="primary-button search-button">
+            Search Flights →
+          </button>
+          <p class="note">
+            Demo only. Flight schedules and fares are illustrative.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section class="results-section hidden" id="results">
+      <p class="eyebrow">YOUR SEARCH</p>
+      <h2>Flight options</h2>
+      <p id="searchSummary" class="summary"></p>
+      <div id="flightList" class="flight-list"></div>
+    </section>
+
+    <section class="manage-section" id="manage">
+      <div>
+        <p class="eyebrow">TRAVEL MADE SIMPLE</p>
+        <h2>Manage your booking</h2>
+        <p>
+          In a connected airline system, enter your booking reference
+          and surname to retrieve an existing reservation.
+        </p>
+      </div>
+
+      <form id="manageForm" class="manage-card">
+        <label>
+          Booking reference
+          <input id="reference" placeholder="e.g. ABC123" required>
+        </label>
+        <label>
+          Passenger surname
+          <input id="surname" placeholder="Your surname" required>
+        </label>
+        <button type="submit" class="secondary-button">
+          Find booking →
+        </button>
+        <p class="note">Demo only: real reservations cannot be retrieved.</p>
+      </form>
+    </section>
+
+    <section class="about-section" id="about">
+      <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+      <h2>Make travel planning simpler.</h2>
+      <div class="benefits">
+        <article>
+          <span>✈</span>
+          <h3>Search flights</h3>
+          <p>Choose your departure, destination and travel dates.</p>
+        </article>
+        <article>
+          <span>◷</span>
+          <h3>Compare options</h3>
+          <p>Explore sample departure times and prices.</p>
+        </article>
+        <article>
+          <span>♡</span>
+          <h3>Plan your trip</h3>
+          <p>Review your selected journey before proceeding.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="official-section">
+      <div>
+        <p class="eyebrow">READY TO FLY?</p>
+        <h2>Need a real flight ticket?</h2>
+        <p>
+          Use the official Ibom Air website for current fares,
+          availability and confirmed bookings.
+        </p>
+      </div>
+      <a href="https://www.ibomair.com/"
+         target="_blank" rel="noopener noreferrer"
+         class="official-button">Official website ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">
+      <span class="logo-icon">i</span>
+      <span>ibom<span class="orange">air</span></span>
+    </a>
+    <p>© <span id="year"></span> · Independent website demonstration.</p>
+    <p>This is not an official Ibom Air booking system.</p>
+  </footer>
+
+  <dialog id="bookingDialog">
+    <button type="button" id="closeDialog"
+      class="close-dialog" aria-label="Close dialog">×</button>
+    <div class="dialog-icon">✈</div>
+    <p class="eyebrow">DEMO BOOKING</p>
+    <h2>Review your journey</h2>
+    <p id="bookingDetails"></p>
+    <p class="warning">
+      No ticket has been booked and no payment has been taken.
+      Visit the official airline website to purchase a real ticket.
+    </p>
+    <a href="https://www.ibomair.com/"
+       target="_blank" rel="noopener noreferrer"
+       class="primary-button">Visit Ibom Air ↗</a>
+  </dialog>
+
+  <div id="message" class="message" role="status" aria-live="polite"></div>
+
+  <nav>
+  <a href="index.html">Home</a>
+  <a href="index.html#booking">Book a flight</a>
+  <a href="index.html#manage">Manage booking</a>
+  <a href="login.html">Login</a>
+</nav>
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#082d5c">
+  <title>Login | Ibom Air</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">i</span>
+      <span>ibom<span class="orange">air</span></span>
+    </a>
+
+    <a href="index.html" class="back-link">← Back to home</a>
+  </header>
+
+  <main class="login-container">
+
+    <section class="login-visual">
+      <div class="visual-content">
+        <p class="eyebrow">WELCOME ABOARD</p>
+        <h1>Your next journey<br>starts <span>here.</span></h1>
+        <p>
+          Sign in to access your account and make planning
+          your next trip easier.
+        </p>
+        <div class="plane-art" aria-hidden="true">✈</div>
+        <div class="visual-footer">
+          <span>✦</span> Fly with confidence
+        </div>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-box">
+
+        <div class="mobile-logo">
+          <span class="logo-icon">i</span>
+        </div>
+
+        <p class="eyebrow">YOUR TRAVEL ACCOUNT</p>
+        <h2>Welcome back</h2>
+        <p class="subtitle">
+          Enter your details to sign in to your account.
+        </p>
+
+        <form id="loginForm">
+
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+          >
+
+          <div class="password-heading">
+            <label for="password">Password</label>
+            <a href="#" id="forgotPassword">Forgot password?</a>
+          </div>
+
+          <div class="password-wrapper">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              minlength="8"
+              required
+            >
+            <button
+              type="button"
+              id="togglePassword"
+              aria-label="Show password"
+            >Show</button>
+          </div>
+
+          <label class="remember">
+            <input type="checkbox" id="remember">
+            <span>Remember me</span>
+          </label>
+
+          <button type="submit" class="login-button">
+            <a href="index.html">Sign in </a><span>→</span>
+          </button>
+
+          <p id="formMessage" class="form-message"
+             role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="separator"><span>OR</span></div>
+
+        <p class="signup-text">
+          Don't have an account?
+          <a href="register.html">Create an account</a>
+        </p>
+
+        <p class="security-note">
+          🔒 Never share your password with anyone.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Ibom Air website demo.</p>
+    <p>This is an independent demonstration, not an official airline login.</p>
+  </footer>
+
+</body>
+</html>
